@@ -1,0 +1,173 @@
+<div class="pattern">
+  <h2>Forms and Validation</h2>
+  <p class="subtitle pattern-description">
+    Demonstrating form elements and majestic validation
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<form class="form_pretty">
+  <div class="grid grid--gutter_small grid--collapse">
+    <div class="column-4">
+      <label class="textfield textfield--label_bordered">
+        <input type="text" name="fullname" value="Paul Rudd" validation="full_name" />
+        <span class="textfield-label">Full Name</span>
+      </label>
+    </div>
+    <div class="column-4">
+      <label class="textfield">
+        <input type="text" name="email" id="email" validation="required" />
+        <span class="textfield-label">Email</span>
+      </label>
+    </div>
+    <div class="column-4">
+      <label class="dropdown">
+        <select name="number" id="number" validation="required">
+          <option disabled="disabled" selected="selected">Number</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="grid grid--gutter_small grid--collapse">
+    <div class="column-4 column--bottom">
+      <label class="dropdown validation_right" data-validation-placement="birthday-label">
+        <span class="dropdown-label" id="birthday-label">Birthday</span>
+        <select name="day" id="day" validation="required">
+          <option disabled="disabled" selected="selected">Day</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+    <div class="column-4 column--bottom">
+      <label class="dropdown" data-validation-placement="birthday-label">
+        <select name="month" id="month" validation="required">
+          <option disabled="disabled" selected="selected">Month</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+    <div class="column-4 column--bottom">
+      <label class="dropdown" data-validation-placement="birthday-label">
+        <select name="year" id="year" validation="required">
+          <option disabled="disabled" selected="selected">Year</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <label class="textfield">
+    <textarea name="comments" disabled></textarea>
+    <span class="textfield-label">Comments</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" name="terms" value="yes" validation="checkbox" />
+    <span class="checkbox-label">Checkbox</span>
+  </label>
+  <input type="submit" class="btn" />
+</form>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Auto-tab</h2>
+  <p class="subtitle pattern-description">
+    Automatically tab after set number of keys by using <code>data-autotab="{{ int }}"</code>
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<form class="form_pretty">
+  <p class="type--gray3 validation_placement" id="tab-label">Auto Tab (ssn example)</p>
+  <div class="grid grid--gutter_small grid--collapse">
+    <div class="column-4">
+      <label class="textfield textfield--label_bordered" data-validation-placement="tab-label">
+        <input type="text" data-autotab="3" name="tab1" id="tab1" validation="ssn1" />
+        <span class="textfield-label">Tab 3</span>
+      </label>
+    </div>
+    <div class="column-4">
+      <label class="textfield textfield--label_bordered" data-validation-placement="tab-label">
+        <input type="text" data-autotab="2" name="tab2" id="tab2" validation="ssn2" />
+        <span class="textfield-label">Tab 2</span>
+      </label>
+    </div>
+    <div class="column-4">
+      <label class="textfield textfield--label_bordered" data-validation-placement="tab-label">
+        <input type="text" data-autotab="4" name="tab3" id="tab3" validation="ssn3" />
+        <span class="textfield-label">Tab 4</span>
+      </label>
+    </div>
+  </div>
+  <input type="submit" class="btn" />
+</form>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Password Validation</h2>
+
+  <p class="subtitle pattern-description">
+    Passwords will only pass front end validation when there are at least three of these character types present: uppercase characters, lowercase characters, numbers and special symbols
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<form class="form_pretty" action="/your/endpoint" method="post">
+  <label class="textfield textfield--label_bordered">
+    <input autocomplete="off" validation="password" id="password" type="password" name="user[password]" aria-required="true">
+    <span class="textfield-label">Password</span>
+  </label>
+</form>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>

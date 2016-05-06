@@ -1,0 +1,250 @@
+@import "variables";
+
+header{
+  background-color: $primary;
+  color: $white;
+  padding: 1rem 1.5rem;
+}
+
+header a{
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active{
+    color: $white;
+  }
+}
+
+nav{
+  background-color: $gray6;
+  border-bottom: $gray3;
+  padding: .75rem 1.5rem;
+  text-align: center;
+}
+
+nav li{
+  padding: .2rem 1.5rem;
+  display: inline-block;
+}
+
+.pattern{
+  margin-bottom: 60px;
+}
+
+.pattern-description{
+  margin-bottom: 20px;
+}
+
+.example{
+  margin-bottom: 20px;
+  border: 1px solid $gray2;
+  border-radius: 5px;
+}
+
+.example-demo{
+  padding: 40px 20px 20px;
+  position: relative;
+
+  &:before{
+    color: $gray2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    content: "EXAMPLE";
+  }
+}
+
+.example-demo > button{
+  vertical-align: bottom;
+  margin-bottom: 10px;
+}
+
+.example-demo hr{
+  margin-bottom: 10px;
+  border: none;
+}
+
+.example-demo .notification{
+  margin-bottom: 20px;
+}
+
+.example-demo .icon{
+  margin-bottom: 4px;
+}
+
+.example-demo .icon_button{
+  margin-bottom: 4px;
+}
+
+
+.example-alignment > .grid:first-child{
+  height: 75px;
+}
+
+.example-demo hr{
+  border-bottom: 1px solid $gray3;
+  margin: 30px 0;
+}
+
+.example-code{
+  display: none;
+  padding: 0 20px;
+  border-top: 1px solid $gray2;
+  background-color:#272822;
+  overflow: auto;
+  display: none;
+
+  xmp,
+  pre{
+    margin:0;
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  pre{
+    padding: 10px 0 !important;
+    font-size: $font-size;
+  }
+
+  .pln{
+    color: #fff;
+  }
+  .lit{
+    color: #fff;
+  }
+
+  .tag{
+    color:#f12749;
+  }
+
+  .atv,
+  .str{
+    color:#e6db6b;
+  }
+
+  .atn{
+    color:#a6da2a;
+  }
+  .com{
+    color: $gray2;
+  }
+  .pun{
+    color: #fff;
+  }
+  .kwd{
+    color: #79cdcd;
+  }
+  .typ{
+    color: #fff;
+  }
+}
+
+.example-toggle{
+  text-align: center;
+  background-color: $gray5;
+  padding: 10px;
+  cursor: pointer;
+
+  &:before{
+    content: "Show Code";
+  }
+
+  &:hover{
+    background-color: $gray4;
+  }
+}
+
+.example-toggle.is-active{
+  &:before{
+    content: "Hide Code";
+  }
+}
+
+.color-cube{
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+.color-cube.gray1{
+  background-color: $gray1;
+}
+
+.color-cube.gray2{
+  background-color: $gray2;
+}
+
+.color-cube.gray3{
+  background-color: $gray3;
+}
+
+.color-cube.gray4{
+  background-color: $gray4;
+}
+
+.color-cube.gray5{
+  background-color: $gray5;
+}
+
+.color-cube.gray6{
+  background-color: $gray6;
+}
+
+.color-cube.primary{
+  background-color: $primary;
+}
+
+.color-cube.primary-dark{
+  background-color: $primary-dark;
+}
+
+.color-cube.green{
+  background-color: $green;
+}
+
+.color-cube.green-dark{
+  background-color: $green-dark;
+}
+
+.color-cube.yellow{
+  background-color: $yellow;
+}
+
+.color-cube.yellow-dark{
+  background-color: $yellow-dark;
+}
+
+.color-cube.red{
+  background-color: $red;
+}
+
+.color-cube.red-dark{
+  background-color: $red-dark;
+}
+
+.color-cube span{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .75);
+  padding: 3px 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.menu-toggle{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: $z_index-5;
+}
+
+.kss-modifier-title{
+  color: $gray3;
+}

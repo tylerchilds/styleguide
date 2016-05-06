@@ -1,0 +1,27 @@
+
+@mixin container{
+  padding: 10px;
+
+  @media (min-width: 768px){
+    padding: 20px;
+  }
+}
+
+@mixin container--bordered{
+  border: 1px solid $gray3;
+  border-radius: 1px;
+}
+
+
+@mixin wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@mixin wrapper--large{
+  max-width: 1200px;
+}
+
+@mixin wrapper--small{
+  max-width: 640px;
+}

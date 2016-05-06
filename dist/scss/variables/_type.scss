@@ -1,0 +1,13 @@
+// Font based variables
+//
+// Styleguide
+
+$base-font:       'Trebuchet MS', 'Segoe UI', Helvetica, Verdana, sans-serif !default;
+$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace;
+
+$heading:         $base-font !default;
+$body:            $base-font !default;
+$monospace:       $monospace-font !default;
+
+$font-size: 1.5rem;
+$line-height: 1.44;

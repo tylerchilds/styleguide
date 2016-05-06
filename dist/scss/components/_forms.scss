@@ -1,0 +1,257 @@
+/*
+
+Form Elements
+
+Styleguide 3.0
+
+*/
+
+/*
+
+Radio
+
+Markup:
+<label class="radio {{modifier_class}}">
+  <input type="radio" name="change1" checked/>
+  <span class="radio-label">Radio</span>
+</label>
+<label class="radio {{modifier_class}}">
+  <input type="radio" name="change1" />
+  <span class="radio-label">Radio</span>
+</label>
+
+Styleguide 3.1
+
+*/
+
+.radio input[type=radio]{
+  position: absolute;
+  z-index: $z-index-0;
+  opacity: 0;
+}
+
+.radio{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 0 0 10px 30px;
+
+  @media (min-width: 768px){
+    display:inline-block;
+    padding-right: 20px;
+  }
+
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid $gray3;
+    border-radius: 20px;
+    background-color: #fff;
+    content: '';
+  }
+}
+
+.radio-label{
+  display: inline-block;
+
+  &:before{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $primary;
+    content: '';
+    border-radius: 20px;
+  }
+}
+
+.radio input[type=radio]:focus + .radio-label:before{
+  visibility: visible;
+}
+
+.radio input[type=radio]:checked + .radio-label{
+  font-weight: 500;
+
+  &:after{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: $primary;
+    content: '';
+    border-radius: 10px;
+  }
+}
+
+/*
+
+Checkbox
+
+Markup:
+<label class="checkbox {{modifier_class}}">
+  <input type="checkbox" />
+  <span class="checkbox-label">Checkbox</span>
+</label>
+
+Styleguide 3.2
+
+*/
+
+.checkbox{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 2px 0 0 40px;
+}
+
+.checkbox input[type=checkbox]{
+  position: absolute;
+  z-index: $z-index-0;
+  opacity: 0;
+}
+
+.checkbox .checkbox-label {
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid $gray3;
+    border-radius: 2px;
+    background-color: $white;
+    content: '';
+  }
+
+  &:after{
+    border-radius: 2px;
+    @include icon();
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 14px;
+    width: 14px;
+    padding: 2px;
+    border: 1px solid transparent;
+    color: $primary-dark;
+    font-size: 14px;
+    content: '';
+  }
+}
+
+.checkbox .checkbox-label.red-checkbox:before{
+  border-color: $red;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-label {
+  &:before{
+    border-color: $gray3;
+  }
+
+  &:after{
+    content: '\f00c';
+  }
+}
+
+.checkbox input[type=checkbox]:focus + .checkbox-label:after {
+  border-color: $primary;
+}
+
+/*
+
+Input and text areas
+
+Markup:
+<form>
+<label class="textfield {{modifier_class}}">
+  <input type="text" />
+  <span class="textfield-label">First Name*</span>
+</label>
+<br>
+<label class="textfield {{modifier_class}}">
+  <textarea></textarea>
+  <span class="textfield-label">Message*</span>
+</label>
+</form>
+
+Styleguide 3.3
+
+*/
+
+.textfield {
+  position: relative;
+  display: block;
+}
+
+.textfield:before {
+  position: absolute;
+  line-height: inherit;
+}
+
+.textfield input,
+.textfield textarea {
+  border: 1px solid $gray3;
+  border-radius: 2px;
+  padding: 5px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include fs-large();
+}
+
+.textfield textarea {
+  margin-bottom: -5px;
+}
+
+.textfield input:focus,
+.textfield textarea:focus {
+  outline: none;
+  border-color: $primary;
+}
+
+.textfield input[disabled],
+.textfield textarea[disabled] {
+  background-color: $gray6;
+  color: $gray2;
+}
+
+/*
+
+Select
+the width of the selectmenu depends on the width of the original select element
+
+Markup:
+<form>
+  <label class="dropdown {{modifier_class}}">
+    <select>
+      <option disabled="disabled" selected="selected">Select</option>
+      <option>Work It</option>
+      <option>Harder</option>
+      <option>Better</option>
+      <option>Faster</option>
+      <option>Stronger</option>
+      <option>More Than</option>
+      <option>Hour</option>
+      <option>Our</option>
+      <option>Never</option>
+      <option>Ever</option>
+      <option>After</option>
+      <option>Work is</option>
+      <option>Over</option>
+    </select>
+  </label>
+</form>
+
+Styleguide 3.4
+
+*/
+
+select {
+  width: 100%;
+}

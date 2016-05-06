@@ -1,0 +1,54 @@
+// Utility classes
+//
+// Styleguide
+
+.u-f-none{
+  float: none;
+}
+
+.u-f-left{
+  float: left;
+}
+
+.u-f-right{
+  float: right;
+}
+
+.u-clearfix{
+  overflow: hidden;
+  clear: both;
+}
+
+.u-ta-left{
+  text-align: left;
+}
+
+.u-ta-center{
+  text-align: center;
+}
+
+.u-ta-right{
+  text-align: right;
+}
+
+.u-disabled{
+  opacity:0.5;
+  pointer-events:none;
+}
+
+.u-box{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.u-font-smoothing{
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u-appearance-none{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

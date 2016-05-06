@@ -1,0 +1,50 @@
+/*
+
+Containers
+
+Containers are size agnostic. They could be used as full page width elements or nested.
+
+Markup:
+<div class="container {{modifier_class}}">Container</div>
+
+.container--bordered          - Container with border
+
+Styleguide 4.0
+
+*/
+
+.container{
+  @include container();
+}
+
+.container--bordered{
+  @include container--bordered();
+}
+
+/*
+
+Wrappers
+
+Use wrappers when you need a content area that is the standard width and centered on the page.
+
+Markup:
+<div class="wrapper {{modifier_class}}">Wrapper</div>
+
+.wrapper--small       - Small Wrapper
+.wrapper--large      - Smaller Wrapper
+
+Styleguide 8.1
+
+*/
+
+.wrapper{
+  @include wrapper();
+}
+
+.wrapper--large{
+  @include wrapper--large();
+}
+
+.wrapper--small{
+  @include wrapper--small();
+}

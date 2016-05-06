@@ -1,0 +1,89 @@
+@mixin icon($font-family: "FontAwesome") {
+  display: inline-block;
+  font-family: #{$font-family};
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+
+Typesetting sizes
+
+*/
+
+@mixin fs-xsmall(){
+  font-size: $font-size - .4;
+}
+
+@mixin fs-small(){
+  font-size: $font-size - .2;
+}
+
+@mixin fs-base(){
+  font-size: $font-size;
+}
+
+@mixin fs-large(){
+  font-size: $font-size + .2;
+}
+
+/*
+
+Type setting headers
+
+*/
+
+@mixin heading(){
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin: 1rem 0 1.1rem;
+}
+
+@mixin h1(){
+  @include heading();
+}
+
+@mixin h2(){
+  @include heading();
+}
+
+@mixin h3(){
+  @include heading();
+}
+
+@mixin h4(){
+  @include heading();
+}
+
+@mixin h5(){
+  @include heading();
+}
+
+@mixin h6(){
+  @include heading();
+}
+
+/*
+
+Typesetting weights
+
+*/
+
+@mixin fw-bold(){
+  font-weight: 700;
+}
+
+@mixin fw-semibold(){
+  font-weight: 500;
+}
+
+@mixin fw-normal(){
+  font-weight: 400;
+}
+
+@mixin fw-light(){
+  font-weight: 100;
+}

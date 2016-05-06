@@ -1,0 +1,271 @@
+*{
+  @extend .u-font-smoothing;
+}
+
+html{
+  height: 100%;
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+pre,
+code,
+samp,
+kbd{
+  font-family: $monospace;
+  border: 1px solid $gray4;
+  color: $primary-dark;
+  @include fs-xsmall();
+}
+
+code,
+samp,
+kbd{
+  border-radius: 2px;
+  padding: 2px 4px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+code,
+samp,
+kbd{
+  &.code-block{
+    display: block;
+    padding: 20px;
+    border-radius: 4px;
+  }
+}
+
+pre{
+  padding: 8px;
+  border-radius: 4px;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  code,
+  samp,
+  kbd{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+a:link{
+  color: $primary;
+  text-decoration: none;
+}
+
+a:visited{
+  color: $primary;
+}
+
+a:hover,
+a:focus{
+  color: $primary-dark;
+}
+
+a:active{
+  color: $primary-dark;
+}
+
+img,
+video{
+  max-width: 100%;
+}
+
+hr,
+pre,
+blockquote{
+  margin-bottom: 1.75rem;
+}
+
+p{
+  margin: 10px 0;
+}
+
+img{
+  margin-bottom: -5px;
+}
+
+ol,
+ul{
+	margin-left: 2rem;
+}
+
+ol{
+	list-style-type: decimal;
+}
+
+ul{
+	list-style-type: disc;
+}
+
+dt{
+	font-style: italic;
+}
+dd{
+	text-indent: 2rem;
+}
+
+hr{
+  border-top: 1px solid $gray3;
+  border-bottom: 1px solid $gray4;
+  border-left: none;
+  border-right: none;
+}
+
+blockquote{
+	margin-left: 1.2rem;
+	border-left: 3px solid $gray4;
+	padding: .9rem 1.2rem;
+
+	p:last-child{
+		padding-bottom: 0;
+	}
+}
+
+
+figure{
+  display: table;
+  margin: 0 auto;
+
+  img{
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+small{
+
+}
+
+figcaption,
+sub,
+sup{
+  @include fs-small();
+}
+
+caption,
+figcaption{
+  text-align: center;
+  font-style: italic;
+}
+
+em,
+cite,
+i{
+  font-style: italic;
+}
+
+strong,
+var,
+b{
+  font-weight: bold;
+}
+
+q{
+  &:before{
+    content: "'";
+  }
+
+  &:after{
+    content: "'";
+  }
+
+  & > q{
+    font-style: italic;
+  }
+}
+
+dfn,
+abbr{
+  border-bottom: 1px dotted $gray2;
+  cursor: default;
+}
+
+sub{
+  vertical-align: sub;
+}
+sup{
+  vertical-align: super;
+}
+
+table{
+  border-radius: 4px;
+  border-collapse: separate;
+  margin-bottom: 1.75rem;
+  width: 100%;
+
+  caption{
+
+  }
+
+  thead{
+
+  }
+
+  tbody{
+
+  }
+
+
+  th{
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid $gray3;
+  }
+
+  th, td{
+    padding: 10px;
+
+    @media (min-width: 768px){
+      padding: 15px;
+    }
+  }
+
+  td{
+    @include fs-small();
+  }
+
+  tfoot{
+
+    td{
+
+    }
+  }
+}
+
+[type="text"],
+[type="email"],
+[type="password"],
+[type="submit"],
+[type="button"],
+label,
+select,
+button,
+textarea
+{
+  @extend .body;
+  resize: none;
+  @extend .u-appearance-none;
+}
+
+// remove yellow from chrome auto-fill background
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: $gray1;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  color: $gray1;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "styleguide",
+  "author": "Tyler Childs",
+  "contributors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "description": "A simple styleguide framework powered by gulp and kss-node.",
+  "homepage": "http://www.tylerchilds.com/styleguide",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tylerchilds/styleguide.git"
+  },
+  "scripts": {
+    "deploy": "./deploy.sh"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "gulp": "latest",
+    "gulp-bump": "latest",
+    "gulp-clean": "latest",
+    "gulp-concat": "latest",
+    "gulp-exec": "latest",
+    "gulp-git": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-swig": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-tag-version": "latest",
+    "kss": "latest",
+    "minimist": "latest",
+    "run-sequence": "latest"
+  }
+}

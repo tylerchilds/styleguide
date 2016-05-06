@@ -1,0 +1,171 @@
+/*
+
+Buttons
+
+Buttons and their variations
+
+Markup:
+<a href="#" class="btn {{modifier_class}}">Button</a>
+
+.btn--danger            - Warning button style
+.btn--outline         - Outlined button
+.btn--invisible       - Hardly even a button, but great for alignment
+.btn--block           - 100% width with minimal side padding
+.btn--inline          - Always an inline block button
+
+Styleguide 2.0
+
+*/
+
+.btn{
+  @extend .u-font-smoothing;
+  border-radius: 4px;
+  -webkit-transition-property: background-color border-color;
+  -moz-transition-property: background-color border-color;
+  -o-transition-property: background-color border-color;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 2px solid $primary;
+  background-color: $primary;
+  color: $white;
+  height: 48px;
+  line-height: 44px; // based on a 2px border
+  padding: 0 40px;
+
+  @media (min-width: 768px){
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+    color: $white;
+  }
+
+  &:focus{
+    outline: 1px dotted $gray3;
+  }
+}
+
+.btn--danger{
+  background-color: $red;
+  border-color: $red;
+  color: $white;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $white;
+  }
+
+  &:hover{
+    background-color: $red-dark;
+    border-color: $red-dark;
+  }
+}
+
+.btn--outline{
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  background-color: rgba(255,255,255, 0);
+  border-color: $primary;
+  color: $primary;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $primary;
+  }
+
+  &:hover{
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+}
+
+.btn--outline.btn--danger{
+  border-color: $red;
+  color: $red;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $red;
+  }
+
+
+  &:hover{
+    background-color: $red;
+    border-color: $red;
+    color: $white;
+  }
+}
+
+.btn--invisible{
+  border-color: transparent;
+  background-color: transparent;
+  color: $primary;
+  text-decoration: underline;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $primary;
+  }
+
+  &:hover{
+    color: $primary-dark;
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.btn--invisible.btn--danger{
+  color: $red;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $red;
+  }
+
+  &:hover{
+    color: $red-dark;
+  }
+}
+
+.btn--block{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn--inline{
+  display: inline-block;
+  width: auto;
+}
+
+[type=button],
+[type=submit],
+button{
+  @extend .btn;
+}
