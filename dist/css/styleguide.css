@@ -2447,15 +2447,16 @@ Styleguide 3.1
   position: relative;
   display: block;
   cursor: pointer;
-  padding: 0 0 10px 30px; }
+  padding: 0 0 0 30px; }
   @media (min-width: 768px) {
     .radio {
       display: inline-block;
       padding-right: 20px; } }
   .radio:before {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    margin-top: -10px;
     height: 16px;
     width: 16px;
     border: 2px solid #7d7d7e;
@@ -2468,8 +2469,9 @@ Styleguide 3.1
   .radio-label:before {
     visibility: hidden;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    margin-top: -10px;
     height: 18px;
     width: 18px;
     border: 1px solid #D15017;
@@ -2484,7 +2486,8 @@ Styleguide 3.1
   .radio input[type=radio]:checked + .radio-label:after {
     position: absolute;
     left: 5px;
-    top: 5px;
+    top: 50%;
+    margin-top: -5px;
     width: 10px;
     height: 10px;
     background-color: #D15017;
@@ -2508,7 +2511,7 @@ Styleguide 3.2
   position: relative;
   display: inline-block;
   cursor: pointer;
-  padding: 2px 0 0 40px; }
+  padding: 0 0 0 33px; }
 
 .checkbox input[type=checkbox] {
   position: absolute;
@@ -2517,8 +2520,9 @@ Styleguide 3.2
 
 .checkbox .checkbox-label:before {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  margin-top: -10px;
   height: 16px;
   width: 16px;
   border: 2px solid #7d7d7e;
@@ -2537,7 +2541,8 @@ Styleguide 3.2
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  margin-top: -10px;
   height: 14px;
   width: 14px;
   padding: 2px;
@@ -2545,9 +2550,6 @@ Styleguide 3.2
   color: #ba4714;
   font-size: 14px;
   content: ''; }
-
-.checkbox .checkbox-label.red-checkbox:before {
-  border-color: #D43535; }
 
 .checkbox input[type=checkbox]:checked + .checkbox-label:before {
   border-color: #7d7d7e; }
@@ -2593,8 +2595,7 @@ Styleguide 3.3
   padding: 5px;
   width: 100%;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 1.7rem; }
+  box-sizing: border-box; }
 
 .textfield textarea {
   margin-bottom: -5px; }
@@ -2616,30 +2617,30 @@ the width of the selectmenu depends on the width of the original select element
 
 Markup:
 <form>
-  <label class="dropdown {{modifier_class}}">
+  <label class="select {{modifier_class}}">
     <select>
       <option disabled="disabled" selected="selected">Select</option>
-      <option>Work It</option>
       <option>Harder</option>
       <option>Better</option>
       <option>Faster</option>
-      <option>Stronger</option>
-      <option>More Than</option>
-      <option>Hour</option>
-      <option>Our</option>
-      <option>Never</option>
-      <option>Ever</option>
-      <option>After</option>
-      <option>Work is</option>
-      <option>Over</option>
     </select>
+    <span class="select-label">Select Label</span>
   </label>
 </form>
 
 Styleguide 3.4
 
 */
-select {
-  width: 100%; }
+.select {
+  position: relative; }
+
+.select select {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 5px;
+  border: 1px solid #7d7d7e; }
 
 /*# sourceMappingURL=styleguide.css.map */
