@@ -1,18 +1,15 @@
 *{
-  @extend .u-font-smoothing;
+  @include font-smoothing();
 }
 
 html{
-  height: 100%;
-  position: relative;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  height: 100%;
 }
 
 body{
-  min-height: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  min-height: 100%;
   position: relative;
 }
 
@@ -20,36 +17,36 @@ pre,
 code,
 samp,
 kbd{
-  font-family: $monospace;
+  @include fs-xsmall();
   border: 1px solid $gray4;
   color: $primary-dark;
-  @include fs-xsmall();
+  font-family: $monospace;
 }
 
 code,
 samp,
 kbd{
   border-radius: 2px;
-  padding: 2px 4px;
   overflow-y: hidden;
   overflow-x: auto;
+  padding: 5px 4px 2px 4px;
 }
 
 code,
 samp,
 kbd{
   &.code-block{
+    border-radius: 4px;
     display: block;
     padding: 20px;
-    border-radius: 4px;
   }
 }
 
 pre{
-  padding: 8px;
   border-radius: 4px;
   overflow-y: hidden;
   overflow-x: auto;
+  padding: 8px;
 
   code,
   samp,
@@ -85,13 +82,8 @@ video{
 }
 
 hr,
-pre,
-blockquote{
+pre{
   margin-bottom: 1.75rem;
-}
-
-p{
-  margin: 10px 0;
 }
 
 img{
@@ -119,8 +111,8 @@ dd{
 }
 
 hr{
-  border-top: 1px solid $gray3;
-  border-bottom: 1px solid $gray4;
+  border-top: 1px solid $gray5;
+  border-bottom: 1px solid $gray6;
   border-left: none;
   border-right: none;
 }
@@ -139,6 +131,7 @@ blockquote{
 figure{
   display: table;
   margin: 0 auto;
+  padding-bottom: 1rem;
 
   img{
     display: table;
@@ -146,10 +139,7 @@ figure{
   }
 }
 
-small{
-
-}
-
+small,
 figcaption,
 sub,
 sup{
@@ -160,6 +150,7 @@ caption,
 figcaption{
   text-align: center;
   font-style: italic;
+  padding: .5rem 0;
 }
 
 em,
@@ -202,55 +193,31 @@ sup{
 }
 
 table{
-  border-radius: 4px;
+  border: 1px solid $gray3;
+  border-radius: 2px;
   border-collapse: separate;
   margin-bottom: 1.75rem;
   width: 100%;
 
-  caption{
-
-  }
-
-  thead{
-
-  }
-
-  tbody{
-
-  }
-
-
   th{
+    @include fw-bold();
     text-align: left;
-    font-weight: 500;
-    border-bottom: 1px solid $gray3;
   }
 
   th, td{
-    padding: 10px;
-
-    @media (min-width: 768px){
-      padding: 15px;
-    }
+    padding: 1rem;
   }
 
   td{
     @include fs-small();
   }
 
-  tfoot{
-
-    td{
-
-    }
+  tr:nth-child(odd) td{
+    background-color: $gray6;
   }
 }
 
-[type="text"],
-[type="email"],
-[type="password"],
-[type="submit"],
-[type="button"],
+input,
 label,
 select,
 button,
@@ -258,14 +225,15 @@ textarea
 {
   @extend .body;
   resize: none;
-  @extend .u-appearance-none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-// remove yellow from chrome auto-fill background
+/* remove yellow from chrome auto-fill background */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
+  color: $gray1;
   -webkit-text-fill-color: $gray1;
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  color: $gray1;
 }

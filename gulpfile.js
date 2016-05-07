@@ -70,10 +70,10 @@ gulp.task('kss', ['kss-html'], function(cb) {
     stdout: true
   };
 
-  fs.readFile("./kss-html/kss/kss-markup.html", "UTF8", function(err, kss_markup) {
+  fs.readFile("./kss-html/html/includes/kss-markup.html", "UTF8", function(err, kss_markup) {
     if (err) { throw err };
 
-    gulp.src('./kss-html/kss/kss-template.html')
+    gulp.src('./kss-html/html/layouts/kss-template.html')
     .pipe(swig({
       defaults: {
         cache: false

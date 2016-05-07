@@ -3,12 +3,14 @@ header {
   color: #ffffff;
   padding: 1rem 1.5rem; }
 
+header h2 {
+  padding: 0; }
+
 header a:link, header a:visited, header a:hover, header a:focus, header a:active {
   color: #ffffff; }
 
 nav {
-  background-color: #efeff0;
-  border-bottom: #7d7d7e;
+  border-bottom: 1px solid #dededf;
   padding: .75rem 1.5rem;
   text-align: center; }
 
@@ -142,24 +144,6 @@ nav li {
 
 .color-cube.primary-dark {
   background-color: #ba4714; }
-
-.color-cube.green {
-  background-color: #35D43F; }
-
-.color-cube.green-dark {
-  background-color: #2ac534; }
-
-.color-cube.yellow {
-  background-color: #EBE22F; }
-
-.color-cube.yellow-dark {
-  background-color: #e9df18; }
-
-.color-cube.red {
-  background-color: #D43535; }
-
-.color-cube.red-dark {
-  background-color: #c52a2a; }
 
 .color-cube span {
   position: absolute;

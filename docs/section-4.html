@@ -32,47 +32,47 @@
 
 <nav>
   <ul>
-  <!--       <a href="#">
-          <h4 class="u-disabled">Containers</h4>
-        </a> -->
       <li>
-        <a href="section-1.html"><!--1.0: -->Typography</a>
+        <a href="section-1.html">Typography</a>
       </li>
       <li>
-        <a href="section-2.html"><!--2.0: -->Buttons</a>
+        <a href="section-2.html">Buttons</a>
       </li>
       <li>
-        <a href="section-3.html"><!--3.0: -->Form Elements</a>
+        <a href="section-3.html">Forms</a>
       </li>
       <li>
-        <a href="section-4.html"><!--4.0: -->Containers</a>
+        <a href="section-4.html">Wrappers</a>
+      </li>
+      <li>
+        <a href="section-6.html">Utilities</a>
       </li>
   </ul>
 </nav>
 
 
-<div class="main js-content container--large">
-  <div class="wrapper container container--large bg--white">
+<div class="wrapper">
 
-
-        <article class="pattern">
-            <h2 id="4">Containers</h2>
-            <div class="subtitle pattern-description"><p>Containers are size agnostic. They could be used as full page width elements or nested.</p>
+      <article class="pattern">
+          <h2 id="4">Wrappers</h2>
+          <div class="subtitle pattern-description"><p>Use wrappers when you need a content area that is the standard width and centered on the page.</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="container [modifier class]">Container</div></div>
-                  <hr />
-                  <p class="u-clearfix kss-modifier-title">Container with border <span class="u-f-right"><code>.container--bordered</code></span></p>
-                  <div class="kss-example"><div class="container container--bordered">Container</div></div>
-              </div>
-              <div class="example-code">
-<pre class="prettyprint no-copy">&lt;div class=&quot;container [modifier class]&quot;&gt;Container&lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-  </div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="wrapper [modifier class]">Wrapper</div></div>
+                <hr />
+                <p class="clearfix kss-modifier-title"><code>.wrapper--small</code> <span class="f-right fs-small">Small Wrapper</span></p>
+                <div class="kss-example"><div class="wrapper wrapper--small">Wrapper</div></div>
+                <hr />
+                <p class="clearfix kss-modifier-title"><code>.wrapper--large</code> <span class="f-right fs-small">Large Wrapper</span></p>
+                <div class="kss-example"><div class="wrapper wrapper--large">Wrapper</div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;wrapper [modifier class]&quot;&gt;Wrapper&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
 </div>
 
 

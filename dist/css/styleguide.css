@@ -6,7 +6,7 @@ Typesetting sizes
 */
 /*
 
-Type setting headers
+Typ
 
 */
 /*
@@ -61,55 +61,242 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.u-f-none {
-  float: none; }
-
-.u-f-left {
-  float: left; }
-
-.u-f-right {
-  float: right; }
-
-.u-clearfix {
-  overflow: hidden;
-  clear: both; }
-
-.u-ta-left {
-  text-align: left; }
-
-.u-ta-center {
-  text-align: center; }
-
-.u-ta-right {
-  text-align: right; }
-
-.u-disabled {
-  opacity: 0.5;
-  pointer-events: none; }
-
-.u-box {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.u-font-smoothing, *, .btn, [type=button],
-[type=submit],
-button {
+* {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.u-appearance-none, [type="text"],
-[type="email"],
-[type="password"],
-[type="submit"],
-[type="button"],
+html {
+  box-sizing: border-box;
+  height: 100%; }
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  position: relative; }
+
+pre,
+code,
+samp,
+kbd {
+  font-size: 1.1rem;
+  border: 1px solid #cdcdce;
+  color: #ba4714;
+  font-family: "Consolas", "Monaco", "Courier New", monospace; }
+
+code,
+samp,
+kbd {
+  border-radius: 2px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 5px 4px 2px 4px; }
+
+code.code-block,
+samp.code-block,
+kbd.code-block {
+  border-radius: 4px;
+  display: block;
+  padding: 20px; }
+
+pre {
+  border-radius: 4px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 8px; }
+  pre code,
+  pre samp,
+  pre kbd {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0; }
+
+a:link {
+  color: #D15017;
+  text-decoration: none; }
+
+a:visited {
+  color: #D15017; }
+
+a:hover,
+a:focus {
+  color: #ba4714; }
+
+a:active {
+  color: #ba4714; }
+
+img,
+video {
+  max-width: 100%; }
+
+hr,
+pre {
+  margin-bottom: 1.75rem; }
+
+img {
+  margin-bottom: -5px; }
+
+ol,
+ul {
+  margin-left: 2rem; }
+
+ol {
+  list-style-type: decimal; }
+
+ul {
+  list-style-type: disc; }
+
+dt {
+  font-style: italic; }
+
+dd {
+  text-indent: 2rem; }
+
+hr {
+  border-top: 1px solid #dededf;
+  border-bottom: 1px solid #efeff0;
+  border-left: none;
+  border-right: none; }
+
+blockquote {
+  margin-left: 1.2rem;
+  border-left: 3px solid #cdcdce;
+  padding: .9rem 1.2rem; }
+  blockquote p:last-child {
+    padding-bottom: 0; }
+
+figure {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 1rem; }
+  figure img {
+    display: table;
+    margin: 0 auto; }
+
+small,
+figcaption,
+sub,
+sup {
+  font-size: 1.3rem; }
+
+caption,
+figcaption {
+  text-align: center;
+  font-style: italic;
+  padding: .5rem 0; }
+
+em,
+cite,
+i {
+  font-style: italic; }
+
+strong,
+var,
+b {
+  font-weight: bold; }
+
+q:before {
+  content: "'"; }
+
+q:after {
+  content: "'"; }
+
+q > q {
+  font-style: italic; }
+
+dfn,
+abbr {
+  border-bottom: 1px dotted #5a5a5b;
+  cursor: default; }
+
+sub {
+  vertical-align: sub; }
+
+sup {
+  vertical-align: super; }
+
+table {
+  border: 1px solid #7d7d7e;
+  border-radius: 2px;
+  border-collapse: separate;
+  margin-bottom: 1.75rem;
+  width: 100%; }
+  table th {
+    font-weight: 700;
+    text-align: left; }
+  table th, table td {
+    padding: 1rem; }
+  table td {
+    font-size: 1.3rem; }
+  table tr:nth-child(odd) td {
+    background-color: #efeff0; }
+
+input,
 label,
 select,
 button,
 textarea {
+  resize: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+  -moz-appearance: none; }
+
+/* remove yellow from chrome auto-fill background */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  color: #3c3c3d;
+  -webkit-text-fill-color: #3c3c3d;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important; }
+
+/*
+
+Utilities
+
+These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.
+
+Markup:
+<div class="{{modifier_class}}" style="background-color: #ddd">
+	Example Text
+</div>
+
+.disabled								 - Disable an Element
+.clearfix                - Clear floats to keep the parent container in shape
+.f-none                  - float: none;
+.f-left                  - float: left;
+.f-right           			 - float: right;
+.ta-left                 - text-align: left;
+.ta-center           		 - text-align: center;
+.ta-right           		 - text-align: right;
+
+Styleguide 6.0
+
+*/
+.disabled {
+  opacity: 0.5;
+  pointer-events: none; }
+
+.f-none {
+  float: none; }
+
+.f-left {
+  float: left; }
+
+.f-right {
+  float: right; }
+
+.clearfix {
+  clear: both;
+  overflow: hidden; }
+
+.ta-left {
+  text-align: left; }
+
+.ta-center {
+  text-align: center; }
+
+.ta-right {
+  text-align: right; }
 
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -1912,9 +2099,9 @@ Typography
 These are the helper classes, but you can also use their standard tags.
 
 Markup:
-<p class="{{modifier_class}}">
+<div class="{{modifier_class}}">
 	Example Text
-</p>
+</div>
 
 .h1           			- Heading 1
 .h2           			- Heading 2
@@ -1922,6 +2109,7 @@ Markup:
 .h4           			- Heading 4
 .h5           			- Heading 5
 .h6           			- Heading 6
+.p									- Paragraph
 
 Styleguide 1.0
 
@@ -1934,70 +2122,70 @@ html {
 
 body,
 .body,
-[type="text"],
-[type="email"],
-[type="password"],
-[type="submit"],
-[type="button"],
+input,
 label,
 select,
 button,
 textarea {
   color: #3c3c3d;
+  font-family: "Trebuchet MS", "Segoe UI", Helvetica, Verdana, sans-serif;
   font-size: 1.5rem;
-  line-height: 1.44;
-  font-family: "Trebuchet MS", "Segoe UI", Helvetica, Verdana, sans-serif; }
+  line-height: 1.44; }
 
 h1,
 .h1 {
   letter-spacing: 1px;
   line-height: 1.2;
-  margin: 1rem 0 1.1rem;
+  padding: 1rem 0 1.5rem;
   font-size: 2.4rem; }
 
 h2,
 .h2 {
   letter-spacing: 1px;
   line-height: 1.2;
-  margin: 1rem 0 1.1rem;
+  padding: 1rem 0 1.5rem;
   font-size: 2.25rem; }
 
 h3,
 .h3 {
   letter-spacing: 1px;
   line-height: 1.2;
-  margin: 1rem 0 1.1rem;
+  padding: 1rem 0 1.5rem;
   font-size: 2.1rem; }
 
 h4,
 .h4 {
   letter-spacing: 1px;
   line-height: 1.2;
-  margin: 1rem 0 1.1rem;
+  padding: 1rem 0 1.5rem;
   font-size: 1.95rem; }
 
 h5,
 .h5 {
   letter-spacing: 1px;
   line-height: 1.2;
-  margin: 1rem 0 1.1rem;
+  padding: 1rem 0 1.5rem;
   font-size: 1.8rem; }
 
 h6,
 .h6 {
   letter-spacing: 1px;
   line-height: 1.2;
-  margin: 1rem 0 1.1rem;
+  padding: 1rem 0 1.5rem;
   font-size: 1.65rem; }
 
+p {
+  padding-bottom: 1rem; }
+
 [class*="fa-"]:before {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  line-height: 1; }
 
 /*
 
@@ -2046,219 +2234,6 @@ Styleguide 1.1
 .fw-bold {
   font-weight: 700; }
 
-html {
-  height: 100%;
-  position: relative;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  min-height: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative; }
-
-pre,
-code,
-samp,
-kbd {
-  font-family: "Consolas", "Monaco", "Courier New", monospace;
-  border: 1px solid #cdcdce;
-  color: #ba4714;
-  font-size: 1.1rem; }
-
-code,
-samp,
-kbd {
-  border-radius: 2px;
-  padding: 2px 4px;
-  overflow-y: hidden;
-  overflow-x: auto; }
-
-code.code-block,
-samp.code-block,
-kbd.code-block {
-  display: block;
-  padding: 20px;
-  border-radius: 4px; }
-
-pre {
-  padding: 8px;
-  border-radius: 4px;
-  overflow-y: hidden;
-  overflow-x: auto; }
-  pre code,
-  pre samp,
-  pre kbd {
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0; }
-
-a:link {
-  color: #D15017;
-  text-decoration: none; }
-
-a:visited {
-  color: #D15017; }
-
-a:hover,
-a:focus {
-  color: #ba4714; }
-
-a:active {
-  color: #ba4714; }
-
-img,
-video {
-  max-width: 100%; }
-
-hr,
-pre,
-blockquote {
-  margin-bottom: 1.75rem; }
-
-p {
-  margin: 10px 0; }
-
-img {
-  margin-bottom: -5px; }
-
-ol,
-ul {
-  margin-left: 2rem; }
-
-ol {
-  list-style-type: decimal; }
-
-ul {
-  list-style-type: disc; }
-
-dt {
-  font-style: italic; }
-
-dd {
-  text-indent: 2rem; }
-
-hr {
-  border-top: 1px solid #7d7d7e;
-  border-bottom: 1px solid #cdcdce;
-  border-left: none;
-  border-right: none; }
-
-blockquote {
-  margin-left: 1.2rem;
-  border-left: 3px solid #cdcdce;
-  padding: .9rem 1.2rem; }
-  blockquote p:last-child {
-    padding-bottom: 0; }
-
-figure {
-  display: table;
-  margin: 0 auto; }
-  figure img {
-    display: table;
-    margin: 0 auto; }
-
-figcaption,
-sub,
-sup {
-  font-size: 1.3rem; }
-
-caption,
-figcaption {
-  text-align: center;
-  font-style: italic; }
-
-em,
-cite,
-i {
-  font-style: italic; }
-
-strong,
-var,
-b {
-  font-weight: bold; }
-
-q:before {
-  content: "'"; }
-
-q:after {
-  content: "'"; }
-
-q > q {
-  font-style: italic; }
-
-dfn,
-abbr {
-  border-bottom: 1px dotted #5a5a5b;
-  cursor: default; }
-
-sub {
-  vertical-align: sub; }
-
-sup {
-  vertical-align: super; }
-
-table {
-  border-radius: 4px;
-  border-collapse: separate;
-  margin-bottom: 1.75rem;
-  width: 100%; }
-  table th {
-    text-align: left;
-    font-weight: 500;
-    border-bottom: 1px solid #7d7d7e; }
-  table th, table td {
-    padding: 10px; }
-    @media (min-width: 768px) {
-      table th, table td {
-        padding: 15px; } }
-  table td {
-    font-size: 1.3rem; }
-
-[type="text"],
-[type="email"],
-[type="password"],
-[type="submit"],
-[type="button"],
-label,
-select,
-button,
-textarea {
-  resize: none; }
-
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-text-fill-color: #3c3c3d;
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  color: #3c3c3d; }
-
-/*
-
-Containers
-
-Containers are size agnostic. They could be used as full page width elements or nested.
-
-Markup:
-<div class="container {{modifier_class}}">Container</div>
-
-.container--bordered          - Container with border
-
-Styleguide 4.0
-
-*/
-.container {
-  padding: 10px; }
-  @media (min-width: 768px) {
-    .container {
-      padding: 20px; } }
-
-.container--bordered {
-  border: 1px solid #7d7d7e;
-  border-radius: 1px; }
-
 /*
 
 Wrappers
@@ -2268,21 +2243,24 @@ Use wrappers when you need a content area that is the standard width and centere
 Markup:
 <div class="wrapper {{modifier_class}}">Wrapper</div>
 
-.wrapper--small       - Small Wrapper
-.wrapper--large      - Smaller Wrapper
+.wrapper--small      - Small Wrapper
+.wrapper--large      - Large Wrapper
 
-Styleguide 8.1
+Styleguide 4.0
 
 */
 .wrapper {
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 2rem 1rem; }
 
 .wrapper--large {
-  max-width: 1200px; }
+  max-width: 1200px;
+  padding: 4rem 2rem; }
 
 .wrapper--small {
-  max-width: 640px; }
+  max-width: 640px;
+  padding: 1rem; }
 
 /*
 
@@ -2293,11 +2271,11 @@ Buttons and their variations
 Markup:
 <a href="#" class="btn {{modifier_class}}">Button</a>
 
-.btn--danger            - Warning button style
+.btn--small           - Small Button
+.btn--large           - Large Button
 .btn--outline         - Outlined button
 .btn--invisible       - Hardly even a button, but great for alignment
 .btn--block           - 100% width with minimal side padding
-.btn--inline          - Always an inline block button
 
 Styleguide 2.0
 
@@ -2305,43 +2283,35 @@ Styleguide 2.0
 .btn, [type=button],
 [type=submit],
 button {
-  border-radius: 4px;
-  -webkit-transition-property: background-color border-color;
-  -moz-transition-property: background-color border-color;
-  -o-transition-property: background-color border-color;
-  -webkit-transition-duration: 200ms;
-  -moz-transition-duration: 200ms;
-  -o-transition-duration: 200ms;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  text-align: center;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: 2px solid #D15017;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: #D15017;
+  border: 0.2rem solid #D15017;
+  border-radius: .2rem;
+  box-sizing: border-box;
   color: #ffffff;
-  height: 48px;
-  line-height: 44px;
-  padding: 0 40px; }
-  @media (min-width: 768px) {
-    .btn, [type=button],
-    [type=submit],
-    button {
-      display: inline-block;
-      width: auto;
-      margin: 0 auto; } }
+  cursor: pointer;
+  display: inline-block;
+  height: 4rem;
+  line-height: 3.6rem;
+  max-width: 100%;
+  transition-property: background-color, border-color;
+  transition-duration: 200ms;
+  margin: 0 auto;
+  padding: 0 3rem;
+  text-align: center;
+  width: auto; }
   .btn:link, [type=button]:link,
   [type=submit]:link,
-  button:link, .btn:focus, [type=button]:focus,
-  [type=submit]:focus,
-  button:focus, .btn:visited, [type=button]:visited,
+  button:link, .btn:visited, [type=button]:visited,
   [type=submit]:visited,
   button:visited {
     color: #ffffff;
     text-decoration: none; }
-  .btn:hover, [type=button]:hover,
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus, .btn:hover, [type=button]:hover,
   [type=submit]:hover,
   button:hover {
     background-color: #ba4714;
@@ -2352,38 +2322,28 @@ button {
   button:focus {
     outline: 1px dotted #7d7d7e; }
 
-.btn--danger {
-  background-color: #D43535;
-  border-color: #D43535;
-  color: #ffffff; }
-  .btn--danger:link, .btn--danger:focus, .btn--danger:visited {
-    color: #ffffff; }
-  .btn--danger:hover {
-    background-color: #c52a2a;
-    border-color: #c52a2a; }
+.btn--small {
+  font-size: 1.3rem;
+  height: 3rem;
+  line-height: 2.6rem;
+  padding: 0 1rem; }
+
+.btn--large {
+  font-size: 1.7rem;
+  height: 5rem;
+  line-height: 4.6rem;
+  padding: 0 5rem; }
 
 .btn--outline {
-  -webkit-transition-property: background-color;
-  -moz-transition-property: background-color;
-  -o-transition-property: background-color;
   background-color: rgba(255, 255, 255, 0);
   border-color: #D15017;
-  color: #D15017; }
+  color: #D15017;
+  transition-property: background-color; }
   .btn--outline:link, .btn--outline:focus, .btn--outline:visited {
     color: #D15017; }
   .btn--outline:hover {
     background-color: #D15017;
     border-color: #D15017;
-    color: #ffffff; }
-
-.btn--outline.btn--danger {
-  border-color: #D43535;
-  color: #D43535; }
-  .btn--outline.btn--danger:link, .btn--outline.btn--danger:focus, .btn--outline.btn--danger:visited {
-    color: #D43535; }
-  .btn--outline.btn--danger:hover {
-    background-color: #D43535;
-    border-color: #D43535;
     color: #ffffff; }
 
 .btn--invisible {
@@ -2398,40 +2358,82 @@ button {
     border-color: transparent;
     background-color: transparent; }
 
-.btn--invisible.btn--danger {
-  color: #D43535; }
-  .btn--invisible.btn--danger:link, .btn--invisible.btn--danger:focus, .btn--invisible.btn--danger:visited {
-    color: #D43535; }
-  .btn--invisible.btn--danger:hover {
-    color: #c52a2a; }
-
 .btn--block {
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.btn--inline {
-  display: inline-block;
-  width: auto; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 /*
 
-Form Elements
+Forms
+
+Markup:
+<form>
+  <label class="textfield {{modifier_class}}">
+    <input type="text" />
+    <span class="textfield-label">Name</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio-label">Desktop</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio-label">Mobile</span>
+  </label>
+  <label class="select {{modifier_class}}">
+    <select>
+      <option disabled="disabled" selected="selected">Flavors</option>
+      <option>Chocolate</option>
+    </select>
+    <span class="select-label">Favorite Ice Cream</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield-label">Comments:</span>
+  </label>
+  <label class="checkbox {{modifier_class}}">
+    <input type="checkbox" />
+    <span class="checkbox-label">I Lied</span>
+  </label>
+  <br/>
+  <input type="submit" value="Cross My Heart" />
+</form>
 
 Styleguide 3.0
 
 */
+label {
+  color: #7d7d7e; }
+
+.label--side, .radio, .checkbox {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: .5rem;
+  padding: .5rem 1rem .5rem 30px;
+  position: relative; }
+
+.label--top, .textfield, .select {
+  display: block;
+  position: relative;
+  padding: 1rem 0 1.5rem; }
+
+.label__label--top, .textfield-label, .select-label {
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  position: absolute;
+  left: .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  top: 0; }
+
 /*
 
 Radio
 
 Markup:
 <label class="radio {{modifier_class}}">
-  <input type="radio" name="change1" checked/>
-  <span class="radio-label">Radio</span>
-</label>
-<label class="radio {{modifier_class}}">
-  <input type="radio" name="change1" />
+  <input type="radio" />
   <span class="radio-label">Radio</span>
 </label>
 
@@ -2439,60 +2441,49 @@ Styleguide 3.1
 
 */
 .radio input[type=radio] {
+  opacity: 0;
   position: absolute;
-  z-index: -1;
-  opacity: 0; }
+  z-index: -1; }
 
-.radio {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  padding: 0 0 0 30px; }
-  @media (min-width: 768px) {
-    .radio {
-      display: inline-block;
-      padding-right: 20px; } }
-  .radio:before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -10px;
-    height: 16px;
-    width: 16px;
-    border: 2px solid #7d7d7e;
-    border-radius: 20px;
-    background-color: #fff;
-    content: ''; }
+.radio:before {
+  background-color: #fff;
+  border: 2px solid #7d7d7e;
+  border-radius: 20px;
+  content: '';
+  height: 16px;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 16px; }
 
 .radio-label {
-  display: inline-block; }
+  color: #7d7d7e; }
   .radio-label:before {
-    visibility: hidden;
-    position: absolute;
-    top: 50%;
+    border: 1px solid #D15017;
+    border-radius: 20px;
+    content: '';
+    height: 18px;
     left: 0;
     margin-top: -10px;
-    height: 18px;
-    width: 18px;
-    border: 1px solid #D15017;
-    content: '';
-    border-radius: 20px; }
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    width: 18px; }
 
 .radio input[type=radio]:focus + .radio-label:before {
   visibility: visible; }
 
-.radio input[type=radio]:checked + .radio-label {
-  font-weight: 500; }
-  .radio input[type=radio]:checked + .radio-label:after {
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    margin-top: -5px;
-    width: 10px;
-    height: 10px;
-    background-color: #D15017;
-    content: '';
-    border-radius: 10px; }
+.radio input[type=radio]:checked + .radio-label:after {
+  background-color: #D15017;
+  border-radius: 10px;
+  content: '';
+  height: 10px;
+  left: 5px;
+  margin-top: -5px;
+  position: absolute;
+  top: 50%;
+  width: 10px; }
 
 /*
 
@@ -2507,49 +2498,45 @@ Markup:
 Styleguide 3.2
 
 */
-.checkbox {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  padding: 0 0 0 33px; }
-
 .checkbox input[type=checkbox] {
+  opacity: 0;
   position: absolute;
-  z-index: -1;
-  opacity: 0; }
+  z-index: -1; }
 
-.checkbox .checkbox-label:before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -10px;
-  height: 16px;
-  width: 16px;
-  border: 2px solid #7d7d7e;
-  border-radius: 2px;
-  background-color: #ffffff;
-  content: ''; }
-
-.checkbox .checkbox-label:after {
-  border-radius: 2px;
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -10px;
-  height: 14px;
-  width: 14px;
-  padding: 2px;
-  border: 1px solid transparent;
-  color: #ba4714;
-  font-size: 14px;
-  content: ''; }
+.checkbox .checkbox-label {
+  color: #7d7d7e; }
+  .checkbox .checkbox-label:before {
+    background-color: #ffffff;
+    border: 2px solid #7d7d7e;
+    border-radius: 2px;
+    content: '';
+    height: 16px;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 16px; }
+  .checkbox .checkbox-label:after {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #ba4714;
+    content: '';
+    font-size: 14px;
+    height: 14px;
+    left: 0;
+    margin-top: -10px;
+    padding: 2px;
+    position: absolute;
+    top: 50%;
+    width: 14px; }
 
 .checkbox input[type=checkbox]:checked + .checkbox-label:before {
   border-color: #7d7d7e; }
@@ -2565,45 +2552,37 @@ Styleguide 3.2
 Input and text areas
 
 Markup:
-<form>
 <label class="textfield {{modifier_class}}">
   <input type="text" />
-  <span class="textfield-label">First Name*</span>
+  <span class="textfield-label">Input</span>
 </label>
-<br>
 <label class="textfield {{modifier_class}}">
   <textarea></textarea>
-  <span class="textfield-label">Message*</span>
+  <span class="textfield-label">Textarea</span>
 </label>
-</form>
 
 Styleguide 3.3
 
 */
-.textfield {
-  position: relative;
-  display: block; }
-
 .textfield:before {
-  position: absolute;
-  line-height: inherit; }
+  line-height: inherit;
+  position: absolute; }
 
 .textfield input,
 .textfield textarea {
   border: 1px solid #7d7d7e;
   border-radius: 2px;
+  box-sizing: border-box;
   padding: 5px;
-  width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  width: 100%; }
 
 .textfield textarea {
   margin-bottom: -5px; }
 
 .textfield input:focus,
 .textfield textarea:focus {
-  outline: none;
-  border-color: #D15017; }
+  border-color: #D15017;
+  outline: none; }
 
 .textfield input[disabled],
 .textfield textarea[disabled] {
@@ -2613,34 +2592,31 @@ Styleguide 3.3
 /*
 
 Select
-the width of the selectmenu depends on the width of the original select element
 
 Markup:
-<form>
-  <label class="select {{modifier_class}}">
-    <select>
-      <option disabled="disabled" selected="selected">Select</option>
-      <option>Harder</option>
-      <option>Better</option>
-      <option>Faster</option>
-    </select>
-    <span class="select-label">Select Label</span>
-  </label>
-</form>
+<label class="select {{modifier_class}}">
+  <select>
+    <option disabled="disabled" selected="selected">Select</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+  <span class="select-label">Select Label</span>
+</label>
 
 Styleguide 3.4
 
 */
-.select {
-  position: relative; }
-
 .select select {
-  width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   background-color: #fff;
+  border: 1px solid #7d7d7e;
   border-radius: 2px;
+  box-sizing: border-box;
   padding: 5px;
-  border: 1px solid #7d7d7e; }
+  width: 100%; }
+
+.select select:focus {
+  border-color: #D15017;
+  outline: none; }
 
 /*# sourceMappingURL=styleguide.css.map */

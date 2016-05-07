@@ -32,153 +32,197 @@
 
 <nav>
   <ul>
-  <!--       <a href="#">
-          <h4 class="u-disabled">Form Elements</h4>
-        </a> -->
-        <!-- <a href="#3-1">3-1Radio</a> -->
-        <!-- <a href="#3-2">3-2Checkbox</a> -->
-        <!-- <a href="#3-3">3-3Input and text areas</a> -->
-        <!-- <a href="#3-4">3-4Select the width of the selectmenu depends on the width of the original select element</a> -->
       <li>
-        <a href="section-1.html"><!--1.0: -->Typography</a>
+        <a href="section-1.html">Typography</a>
       </li>
       <li>
-        <a href="section-2.html"><!--2.0: -->Buttons</a>
+        <a href="section-2.html">Buttons</a>
       </li>
       <li>
-        <a href="section-3.html"><!--3.0: -->Form Elements</a>
+        <a href="section-3.html">Forms</a>
       </li>
       <li>
-        <a href="section-4.html"><!--4.0: -->Containers</a>
+        <a href="section-4.html">Wrappers</a>
+      </li>
+      <li>
+        <a href="section-6.html">Utilities</a>
       </li>
   </ul>
 </nav>
 
 
-<div class="main js-content container--large">
-  <div class="wrapper container container--large bg--white">
+<div class="wrapper">
 
-
-        <article class="pattern">
-            <h2 id="3">Form Elements</h2>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="3-1">
-              <span class="kss-ref badge pull-right">3-1</span> Radio
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="radio [modifier class]">
-  <input type="radio" name="change1" checked/>
-  <span class="radio-label">Radio</span>
-</label>
-<label class="radio [modifier class]">
-  <input type="radio" name="change1" />
+      <article class="pattern">
+          <h2 id="3">Forms</h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><form>
+  <label class="textfield [modifier class]">
+    <input type="text" />
+    <span class="textfield-label">Name</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio-label">Desktop</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio-label">Mobile</span>
+  </label>
+  <label class="select [modifier class]">
+    <select>
+      <option disabled="disabled" selected="selected">Flavors</option>
+      <option>Chocolate</option>
+    </select>
+    <span class="select-label">Favorite Ice Cream</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield-label">Comments:</span>
+  </label>
+  <label class="checkbox [modifier class]">
+    <input type="checkbox" />
+    <span class="checkbox-label">I Lied</span>
+  </label>
+  <br/>
+  <input type="submit" value="Cross My Heart" />
+</form></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;form&gt;
+  &lt;label class=&quot;textfield [modifier class]&quot;&gt;
+    &lt;input type=&quot;text&quot; /&gt;
+    &lt;span class=&quot;textfield-label&quot;&gt;Name&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
+    &lt;span class=&quot;radio-label&quot;&gt;Desktop&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
+    &lt;span class=&quot;radio-label&quot;&gt;Mobile&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;select [modifier class]&quot;&gt;
+    &lt;select&gt;
+      &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
+      &lt;option&gt;Chocolate&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span class=&quot;select-label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;textfield&quot;&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;textfield-label&quot;&gt;Comments:&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;checkbox [modifier class]&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; /&gt;
+    &lt;span class=&quot;checkbox-label&quot;&gt;I Lied&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;br/&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Cross My Heart&quot; /&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="3-1">
+            <span class="kss-ref badge pull-right">3-1</span> Radio
+          </h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><label class="radio [modifier class]">
+  <input type="radio" />
   <span class="radio-label">Radio</span>
 </label></div>
-              </div>
-              <div class="example-code">
+            </div>
+            <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;radio [modifier class]&quot;&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;change1&quot; checked/&gt;
-  &lt;span class=&quot;radio-label&quot;&gt;Radio&lt;/span&gt;
-&lt;/label&gt;
-&lt;label class=&quot;radio [modifier class]&quot;&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;change1&quot; /&gt;
+  &lt;input type=&quot;radio&quot; /&gt;
   &lt;span class=&quot;radio-label&quot;&gt;Radio&lt;/span&gt;
 &lt;/label&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="3-2">
-              <span class="kss-ref badge pull-right">3-2</span> Checkbox
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="checkbox [modifier class]">
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="3-2">
+            <span class="kss-ref badge pull-right">3-2</span> Checkbox
+          </h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><label class="checkbox [modifier class]">
   <input type="checkbox" />
   <span class="checkbox-label">Checkbox</span>
 </label></div>
-              </div>
-              <div class="example-code">
+            </div>
+            <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;checkbox [modifier class]&quot;&gt;
   &lt;input type=&quot;checkbox&quot; /&gt;
   &lt;span class=&quot;checkbox-label&quot;&gt;Checkbox&lt;/span&gt;
 &lt;/label&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="3-3">
-              <span class="kss-ref badge pull-right">3-3</span> Input and text areas
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><form>
-<label class="textfield [modifier class]">
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="3-3">
+            <span class="kss-ref badge pull-right">3-3</span> Input and text areas
+          </h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><label class="textfield [modifier class]">
   <input type="text" />
-  <span class="textfield-label">First Name*</span>
+  <span class="textfield-label">Input</span>
 </label>
-<br>
 <label class="textfield [modifier class]">
   <textarea></textarea>
-  <span class="textfield-label">Message*</span>
-</label>
-</form></div>
-              </div>
-              <div class="example-code">
-<pre class="prettyprint no-copy">&lt;form&gt;
-&lt;label class=&quot;textfield [modifier class]&quot;&gt;
+  <span class="textfield-label">Textarea</span>
+</label></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;label class=&quot;textfield [modifier class]&quot;&gt;
   &lt;input type=&quot;text&quot; /&gt;
-  &lt;span class=&quot;textfield-label&quot;&gt;First Name*&lt;/span&gt;
+  &lt;span class=&quot;textfield-label&quot;&gt;Input&lt;/span&gt;
 &lt;/label&gt;
-&lt;br&gt;
 &lt;label class=&quot;textfield [modifier class]&quot;&gt;
   &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;span class=&quot;textfield-label&quot;&gt;Message*&lt;/span&gt;
-&lt;/label&gt;
-&lt;/form&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="3-4">
-              <span class="kss-ref badge pull-right">3-4</span> Select the width of the selectmenu depends on the width of the original select element
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><form>
-  <label class="select [modifier class]">
-    <select>
-      <option disabled="disabled" selected="selected">Select</option>
-      <option>Harder</option>
-      <option>Better</option>
-      <option>Faster</option>
-    </select>
-    <span class="select-label">Select Label</span>
-  </label>
-</form></div>
-              </div>
-              <div class="example-code">
-<pre class="prettyprint no-copy">&lt;form&gt;
-  &lt;label class=&quot;select [modifier class]&quot;&gt;
-    &lt;select&gt;
-      &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
-      &lt;option&gt;Harder&lt;/option&gt;
-      &lt;option&gt;Better&lt;/option&gt;
-      &lt;option&gt;Faster&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;span class=&quot;select-label&quot;&gt;Select Label&lt;/span&gt;
-  &lt;/label&gt;
-&lt;/form&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-  </div>
+  &lt;span class=&quot;textfield-label&quot;&gt;Textarea&lt;/span&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="3-4">
+            <span class="kss-ref badge pull-right">3-4</span> Select
+          </h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><label class="select [modifier class]">
+  <select>
+    <option disabled="disabled" selected="selected">Select</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+  <span class="select-label">Select Label</span>
+</label></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;label class=&quot;select [modifier class]&quot;&gt;
+  &lt;select&gt;
+    &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;span class=&quot;select-label&quot;&gt;Select Label&lt;/span&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
 </div>
 
 

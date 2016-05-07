@@ -1,31 +1,14 @@
 <main>
-  <div class="pattern">
     <h2>Colors</h2>
-    <p class="pattern-description">
-      A collection of our branded colors
-    </p>
-    <section class="example">
-      <div class="example-demo">
-        <h3>Primary</h3>
-        <div class="color-cube primary"></div>
-        <div class="color-cube primary-dark"></div>
-        <h3>Secondary</h3>
-        <div class="color-cube green"></div>
-        <div class="color-cube green-dark"></div>
-        <div class="color-cube yellow"></div>
-        <div class="color-cube yellow-dark"></div>
-        <div class="color-cube red"></div>
-        <div class="color-cube red-dark"></div>
-        <h3>Grays</h3>
-        <div class="color-cube gray1"></div>
-        <div class="color-cube gray2"></div>
-        <div class="color-cube gray3"></div>
-        <div class="color-cube gray4"></div>
-        <div class="color-cube gray5"></div>
-        <div class="color-cube gray6"></div>
-      </div>
-    </section>
-  </div>
+    <div class="color-cube primary"></div>
+    <div class="color-cube primary-dark"></div>
+    <h3>Grays</h3>
+    <div class="color-cube gray1"></div>
+    <div class="color-cube gray2"></div>
+    <div class="color-cube gray3"></div>
+    <div class="color-cube gray4"></div>
+    <div class="color-cube gray5"></div>
+    <div class="color-cube gray6"></div>
 
   <h2>Sections <a href="#">Linked</a></h2>
 

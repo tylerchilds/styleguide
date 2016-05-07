@@ -1,0 +1,15 @@
+@mixin wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+@mixin wrapper--large{
+  max-width: 1200px;
+  padding: 4rem 2rem;
+}
+
+@mixin wrapper--small{
+  max-width: 640px;
+  padding: 1rem;
+}
