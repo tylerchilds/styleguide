@@ -6,15 +6,15 @@ Markup:
 <form>
   <label class="textfield {{modifier_class}}">
     <input type="text" />
-    <span class="textfield-label">Name</span>
+    <span class="textfield__label">Name</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio-label">Desktop</span>
+    <span class="radio__label">Desktop</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio-label">Mobile</span>
+    <span class="radio__label">Mobile</span>
   </label>
   <label class="select {{modifier_class}}">
     <select>
@@ -25,11 +25,11 @@ Markup:
   </label>
   <label class="textfield">
     <textarea></textarea>
-    <span class="textfield-label">Comments:</span>
+    <span class="textfield__label">Comments:</span>
   </label>
   <label class="checkbox {{modifier_class}}">
     <input type="checkbox" />
-    <span class="checkbox-label">I Lied</span>
+    <span class="checkbox__label">I Lied</span>
   </label>
   <br/>
   <input type="submit" value="Cross My Heart" />
@@ -74,7 +74,7 @@ Radio
 Markup:
 <label class="radio {{modifier_class}}">
   <input type="radio" />
-  <span class="radio-label">Radio</span>
+  <span class="radio__label">Radio</span>
 </label>
 
 Styleguide 3.1
@@ -104,7 +104,7 @@ Styleguide 3.1
   }
 }
 
-.radio-label{
+.radio__label{
   color: $gray3;
 
   &:before{
@@ -121,11 +121,11 @@ Styleguide 3.1
   }
 }
 
-.radio input[type=radio]:focus + .radio-label:before{
+.radio input[type=radio]:focus + .radio__label:before{
   visibility: visible;
 }
 
-.radio input[type=radio]:checked + .radio-label{
+.radio input[type=radio]:checked + .radio__label{
   &:after{
     background-color: $primary;
     border-radius: 10px;
@@ -146,7 +146,7 @@ Checkbox
 Markup:
 <label class="checkbox {{modifier_class}}">
   <input type="checkbox" />
-  <span class="checkbox-label">Checkbox</span>
+  <span class="checkbox__label">Checkbox</span>
 </label>
 
 Styleguide 3.2
@@ -163,7 +163,7 @@ Styleguide 3.2
   z-index: $z-index-0;
 }
 
-.checkbox .checkbox-label {
+.checkbox .checkbox__label {
   color: $gray3;
 
   &:before{
@@ -196,7 +196,7 @@ Styleguide 3.2
   }
 }
 
-.checkbox input[type=checkbox]:checked + .checkbox-label {
+.checkbox input[type=checkbox]:checked + .checkbox__label {
   &:before{
     border-color: $gray3;
   }
@@ -206,7 +206,7 @@ Styleguide 3.2
   }
 }
 
-.checkbox input[type=checkbox]:focus + .checkbox-label:after {
+.checkbox input[type=checkbox]:focus + .checkbox__label:after {
   border-color: $primary;
 }
 
@@ -217,11 +217,11 @@ Input and text areas
 Markup:
 <label class="textfield {{modifier_class}}">
   <input type="text" />
-  <span class="textfield-label">Input</span>
+  <span class="textfield__label">Input</span>
 </label>
 <label class="textfield {{modifier_class}}">
   <textarea></textarea>
-  <span class="textfield-label">Textarea</span>
+  <span class="textfield__label">Textarea</span>
 </label>
 
 Styleguide 3.3
@@ -262,7 +262,7 @@ Styleguide 3.3
   color: $gray2;
 }
 
-.textfield-label{
+.textfield__label{
   @extend .label__label--top;
 }
 
@@ -278,7 +278,7 @@ Markup:
     <option>Option 2</option>
     <option>Option 3</option>
   </select>
-  <span class="select-label">Select Label</span>
+  <span class="select__label">Select Label</span>
 </label>
 
 Styleguide 3.4
@@ -303,6 +303,6 @@ Styleguide 3.4
   outline: none;
 }
 
-.select-label{
+.select__label{
   @extend .label__label--top;
 }

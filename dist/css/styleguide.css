@@ -2371,15 +2371,15 @@ Markup:
 <form>
   <label class="textfield {{modifier_class}}">
     <input type="text" />
-    <span class="textfield-label">Name</span>
+    <span class="textfield__label">Name</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio-label">Desktop</span>
+    <span class="radio__label">Desktop</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio-label">Mobile</span>
+    <span class="radio__label">Mobile</span>
   </label>
   <label class="select {{modifier_class}}">
     <select>
@@ -2390,11 +2390,11 @@ Markup:
   </label>
   <label class="textfield">
     <textarea></textarea>
-    <span class="textfield-label">Comments:</span>
+    <span class="textfield__label">Comments:</span>
   </label>
   <label class="checkbox {{modifier_class}}">
     <input type="checkbox" />
-    <span class="checkbox-label">I Lied</span>
+    <span class="checkbox__label">I Lied</span>
   </label>
   <br/>
   <input type="submit" value="Cross My Heart" />
@@ -2418,7 +2418,7 @@ label {
   position: relative;
   padding: 1rem 0 1.5rem; }
 
-.label__label--top, .textfield-label, .select-label {
+.label__label--top, .textfield__label, .select__label {
   font-size: 1.3rem;
   background-color: #ffffff;
   position: absolute;
@@ -2434,7 +2434,7 @@ Radio
 Markup:
 <label class="radio {{modifier_class}}">
   <input type="radio" />
-  <span class="radio-label">Radio</span>
+  <span class="radio__label">Radio</span>
 </label>
 
 Styleguide 3.1
@@ -2457,9 +2457,9 @@ Styleguide 3.1
   top: 50%;
   width: 16px; }
 
-.radio-label {
+.radio__label {
   color: #7d7d7e; }
-  .radio-label:before {
+  .radio__label:before {
     border: 1px solid #D15017;
     border-radius: 20px;
     content: '';
@@ -2471,10 +2471,10 @@ Styleguide 3.1
     visibility: hidden;
     width: 18px; }
 
-.radio input[type=radio]:focus + .radio-label:before {
+.radio input[type=radio]:focus + .radio__label:before {
   visibility: visible; }
 
-.radio input[type=radio]:checked + .radio-label:after {
+.radio input[type=radio]:checked + .radio__label:after {
   background-color: #D15017;
   border-radius: 10px;
   content: '';
@@ -2492,7 +2492,7 @@ Checkbox
 Markup:
 <label class="checkbox {{modifier_class}}">
   <input type="checkbox" />
-  <span class="checkbox-label">Checkbox</span>
+  <span class="checkbox__label">Checkbox</span>
 </label>
 
 Styleguide 3.2
@@ -2503,9 +2503,9 @@ Styleguide 3.2
   position: absolute;
   z-index: -1; }
 
-.checkbox .checkbox-label {
+.checkbox .checkbox__label {
   color: #7d7d7e; }
-  .checkbox .checkbox-label:before {
+  .checkbox .checkbox__label:before {
     background-color: #ffffff;
     border: 2px solid #7d7d7e;
     border-radius: 2px;
@@ -2516,7 +2516,7 @@ Styleguide 3.2
     position: absolute;
     top: 50%;
     width: 16px; }
-  .checkbox .checkbox-label:after {
+  .checkbox .checkbox__label:after {
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -2538,13 +2538,13 @@ Styleguide 3.2
     top: 50%;
     width: 14px; }
 
-.checkbox input[type=checkbox]:checked + .checkbox-label:before {
+.checkbox input[type=checkbox]:checked + .checkbox__label:before {
   border-color: #7d7d7e; }
 
-.checkbox input[type=checkbox]:checked + .checkbox-label:after {
+.checkbox input[type=checkbox]:checked + .checkbox__label:after {
   content: '\f00c'; }
 
-.checkbox input[type=checkbox]:focus + .checkbox-label:after {
+.checkbox input[type=checkbox]:focus + .checkbox__label:after {
   border-color: #D15017; }
 
 /*
@@ -2554,11 +2554,11 @@ Input and text areas
 Markup:
 <label class="textfield {{modifier_class}}">
   <input type="text" />
-  <span class="textfield-label">Input</span>
+  <span class="textfield__label">Input</span>
 </label>
 <label class="textfield {{modifier_class}}">
   <textarea></textarea>
-  <span class="textfield-label">Textarea</span>
+  <span class="textfield__label">Textarea</span>
 </label>
 
 Styleguide 3.3
@@ -2601,7 +2601,7 @@ Markup:
     <option>Option 2</option>
     <option>Option 3</option>
   </select>
-  <span class="select-label">Select Label</span>
+  <span class="select__label">Select Label</span>
 </label>
 
 Styleguide 3.4
