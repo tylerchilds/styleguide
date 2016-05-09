@@ -6,6 +6,11 @@
 $primary:       #D15017 !default;
 $primary-dark:  darken($primary, 5%) !default;
 
+$link:          #4076D4 !default;
+$link--visited: #9140D4 !default;
+$link--hover:   darken($link, 5%) !default;
+$link--active:  #D44076 !default;
+
 // dark shades
 $gray1:         #3c3c3d !default;
 $gray2:         #5a5a5b !default;

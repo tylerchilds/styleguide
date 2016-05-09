@@ -2,12 +2,12 @@
 var bump          = require('gulp-bump'),
     clean         = require('gulp-clean'),
     concat        = require('gulp-concat'),
+    cssmin        = require('gulp-cssmin'),
     exec          = require('gulp-exec'),
     fs            = require('fs'),
     git           = require('gulp-git'),
     gulp          = require('gulp'),
     include       = require('gulp-include'),
-    minify        = require('gulp-minify-css'),
     minimist      = require('minimist'),
     rename        = require('gulp-rename'),
     replace       = require('gulp-replace'),
@@ -40,7 +40,7 @@ gulp.task('bump', function() {
 });
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'static_assets', 'kss-html', 'kss');
+  runSequence('sass', 'minify', 'kss-html', 'kss');
 });
 
 // Clean build
@@ -124,7 +124,6 @@ gulp.task('kss-html', ['temp'], function(){
     .pipe(gulp.dest('./temp/kss'));
 });
 
-// Compile Sass
 gulp.task('sass', ['temp'], function() {
   gulp.src('./temp/sass/**/*.*')
     .pipe(gulp.dest('./dist/scss'));
@@ -136,33 +135,20 @@ gulp.task('sass', ['temp'], function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
-// Build CSS Docs
-gulp.task('static_assets', function() {
-  // Font Awesome Fonts
-  gulp.src(config.bowerDir + '/font-awesome/fonts/*.*')
-    .pipe(gulp.dest('./dist/fonts'));
-
-  // Fonts
-  gulp.src('./src/fonts/**/*.*')
-    .pipe(gulp.dest('./dist/fonts'));
-
-  // Images
-  return gulp.src('./src/images/**/*.*')
-    .pipe(gulp.dest('dist/images'));
+gulp.task('minify', ['sass'], function() {
+  return gulp.src('./dist/css/styleguide.css')
+    .pipe(cssmin())
+		.pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('tag', function() {
-  // tag the release
   gulp.src('./package.json')
     .pipe(tag_version());
 });
 
 // Move source over for compiling
 gulp.task('temp', function(){
-  // Font Awesome Sass
-  gulp.src(config.bowerDir + '/font-awesome/scss/*.*')
-    .pipe(gulp.dest('./temp/sass/vendor/'));
-
   // Sass
   return gulp.src('./src/sass/**/*.scss')
     .pipe(gulp.dest('./temp/sass/'));

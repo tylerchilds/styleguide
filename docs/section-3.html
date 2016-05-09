@@ -42,9 +42,6 @@
         <a href="section-3.html">Forms</a>
       </li>
       <li>
-        <a href="section-4.html">Wrappers</a>
-      </li>
-      <li>
         <a href="section-6.html">Utilities</a>
       </li>
   </ul>
@@ -57,41 +54,8 @@
           <h2 id="3">Forms</h2>
           <section class="example">
             <div class="example-demo">
-              <div class="kss-example"><form>
-  <label class="textfield [modifier class]">
-    <input type="text" />
-    <span class="textfield__label">Name</span>
-  </label>
-  <label class="radio">
-    <input type="radio" name="example" />
-    <span class="radio__label">Desktop</span>
-  </label>
-  <label class="radio">
-    <input type="radio" name="example" />
-    <span class="radio__label">Mobile</span>
-  </label>
-  <label class="select [modifier class]">
-    <select>
-      <option disabled="disabled" selected="selected">Flavors</option>
-      <option>Chocolate</option>
-    </select>
-    <span class="select-label">Favorite Ice Cream</span>
-  </label>
-  <label class="textfield">
-    <textarea></textarea>
-    <span class="textfield__label">Comments:</span>
-  </label>
-  <label class="checkbox [modifier class]">
-    <input type="checkbox" />
-    <span class="checkbox__label">I Lied</span>
-  </label>
-  <br/>
-  <input type="submit" value="Cross My Heart" />
-</form></div>
-            </div>
-            <div class="example-code">
-<pre class="prettyprint no-copy">&lt;form&gt;
-  &lt;label class=&quot;textfield [modifier class]&quot;&gt;
+<pre class="">&lt;form&gt;
+  &lt;label class=&quot;textfield&quot;&gt;
     &lt;input type=&quot;text&quot; /&gt;
     &lt;span class=&quot;textfield__label&quot;&gt;Name&lt;/span&gt;
   &lt;/label&gt;
@@ -103,26 +67,56 @@
     &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
     &lt;span class=&quot;radio__label&quot;&gt;Mobile&lt;/span&gt;
   &lt;/label&gt;
-  &lt;label class=&quot;select [modifier class]&quot;&gt;
-    &lt;select&gt;
+  &lt;label class=&quot;select&quot;&gt;
+    &lt;select name=&quot;select&quot;&gt;
       &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
       &lt;option&gt;Chocolate&lt;/option&gt;
     &lt;/select&gt;
-    &lt;span class=&quot;select-label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
+    &lt;span class=&quot;select__label&quot; for=&quot;select&quot;&gt;Favorite Ice Cream&lt;/span&gt;
   &lt;/label&gt;
   &lt;label class=&quot;textfield&quot;&gt;
     &lt;textarea&gt;&lt;/textarea&gt;
-    &lt;span class=&quot;textfield__label&quot;&gt;Comments:&lt;/span&gt;
+    &lt;span class=&quot;textfield__label&quot;&gt;Comments&lt;/span&gt;
   &lt;/label&gt;
-  &lt;label class=&quot;checkbox [modifier class]&quot;&gt;
+  &lt;label class=&quot;checkbox&quot;&gt;
     &lt;input type=&quot;checkbox&quot; /&gt;
     &lt;span class=&quot;checkbox__label&quot;&gt;I Lied&lt;/span&gt;
   &lt;/label&gt;
   &lt;br/&gt;
   &lt;input type=&quot;submit&quot; value=&quot;Cross My Heart&quot; /&gt;
 &lt;/form&gt;</pre>
+              <div class="kss-example"><form>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield__label">Name</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Desktop</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Mobile</span>
+  </label>
+  <label class="select">
+    <select name="select">
+      <option disabled="disabled" selected="selected">Flavors</option>
+      <option>Chocolate</option>
+    </select>
+    <span class="select__label" for="select">Favorite Ice Cream</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield__label">Comments</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" />
+    <span class="checkbox__label">I Lied</span>
+  </label>
+  <br/>
+  <input type="submit" value="Cross My Heart" />
+</form></div>
             </div>
-            <div class="example-toggle"></div>
           </section>
       </article>
       <article class="pattern">
@@ -131,18 +125,15 @@
           </h2>
           <section class="example">
             <div class="example-demo">
+<pre class="">&lt;label class=&quot;radio [modifier class]&quot;&gt;
+  &lt;input type=&quot;radio&quot; /&gt;
+  &lt;span class=&quot;radio__label&quot;&gt;Radio&lt;/span&gt;
+&lt;/label&gt;</pre>
               <div class="kss-example"><label class="radio [modifier class]">
   <input type="radio" />
   <span class="radio__label">Radio</span>
 </label></div>
             </div>
-            <div class="example-code">
-<pre class="prettyprint no-copy">&lt;label class=&quot;radio [modifier class]&quot;&gt;
-  &lt;input type=&quot;radio&quot; /&gt;
-  &lt;span class=&quot;radio__label&quot;&gt;Radio&lt;/span&gt;
-&lt;/label&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
           </section>
       </article>
       <article class="pattern">
@@ -151,18 +142,15 @@
           </h2>
           <section class="example">
             <div class="example-demo">
+<pre class="">&lt;label class=&quot;checkbox [modifier class]&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; /&gt;
+  &lt;span class=&quot;checkbox__label&quot;&gt;Checkbox&lt;/span&gt;
+&lt;/label&gt;</pre>
               <div class="kss-example"><label class="checkbox [modifier class]">
   <input type="checkbox" />
   <span class="checkbox__label">Checkbox</span>
 </label></div>
             </div>
-            <div class="example-code">
-<pre class="prettyprint no-copy">&lt;label class=&quot;checkbox [modifier class]&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; /&gt;
-  &lt;span class=&quot;checkbox__label&quot;&gt;Checkbox&lt;/span&gt;
-&lt;/label&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
           </section>
       </article>
       <article class="pattern">
@@ -171,6 +159,14 @@
           </h2>
           <section class="example">
             <div class="example-demo">
+<pre class="">&lt;label class=&quot;textfield [modifier class]&quot;&gt;
+  &lt;input type=&quot;text&quot; /&gt;
+  &lt;span class=&quot;textfield__label&quot;&gt;Input&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;textfield [modifier class]&quot;&gt;
+  &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;span class=&quot;textfield__label&quot;&gt;Textarea&lt;/span&gt;
+&lt;/label&gt;</pre>
               <div class="kss-example"><label class="textfield [modifier class]">
   <input type="text" />
   <span class="textfield__label">Input</span>
@@ -180,17 +176,6 @@
   <span class="textfield__label">Textarea</span>
 </label></div>
             </div>
-            <div class="example-code">
-<pre class="prettyprint no-copy">&lt;label class=&quot;textfield [modifier class]&quot;&gt;
-  &lt;input type=&quot;text&quot; /&gt;
-  &lt;span class=&quot;textfield__label&quot;&gt;Input&lt;/span&gt;
-&lt;/label&gt;
-&lt;label class=&quot;textfield [modifier class]&quot;&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;span class=&quot;textfield__label&quot;&gt;Textarea&lt;/span&gt;
-&lt;/label&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
           </section>
       </article>
       <article class="pattern">
@@ -199,6 +184,15 @@
           </h2>
           <section class="example">
             <div class="example-demo">
+<pre class="">&lt;label class=&quot;select [modifier class]&quot;&gt;
+  &lt;select&gt;
+    &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;span class=&quot;select__label&quot;&gt;Select Label&lt;/span&gt;
+&lt;/label&gt;</pre>
               <div class="kss-example"><label class="select [modifier class]">
   <select>
     <option disabled="disabled" selected="selected">Select</option>
@@ -209,18 +203,6 @@
   <span class="select__label">Select Label</span>
 </label></div>
             </div>
-            <div class="example-code">
-<pre class="prettyprint no-copy">&lt;label class=&quot;select [modifier class]&quot;&gt;
-  &lt;select&gt;
-    &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
-    &lt;option&gt;Option 1&lt;/option&gt;
-    &lt;option&gt;Option 2&lt;/option&gt;
-    &lt;option&gt;Option 3&lt;/option&gt;
-  &lt;/select&gt;
-  &lt;span class=&quot;select__label&quot;&gt;Select Label&lt;/span&gt;
-&lt;/label&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
           </section>
       </article>
 </div>
@@ -232,10 +214,7 @@
 
     
   <script src="../kss-html/dist/js/kss.js"></script>
-  <script src="../dist/js/styleguide.js"></script>
 
 
-
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   </body>
 </html>

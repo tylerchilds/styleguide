@@ -6,7 +6,7 @@ These are the helper classes, but you can also use their standard tags.
 
 Markup:
 <div class="{{modifier_class}}">
-	Example Text
+  Example Text
 </div>
 
 .h1           			- Heading 1
@@ -73,29 +73,25 @@ p{
 	@include p();
 }
 
-[class*="fa-"]:before{
-  @include icon();
-}
-
 /*
 
-Type
+Type Utilities
 
-Typographic settings
+These are specific typography related utilities
 
 Markup:
-<h3 class="type {{modifier_class}}">
+<div class="type {{modifier_class}}">
   The quick brown fox jumps over the lazy dog.
-</h3>
+</div>
 
-.fs-xsmall           - Smaller than the default font size
+.fs-xsmall           - Smaller than the small font size
 .fs-small            - Smaller than the default font size
-.fs-normal           - Exactly the default font size
+.fs-base           	 - Exactly the default font size
 .fs-large            - Larger than the default font size
-.fw-light            - Changes the type to be 100 weight
+.fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
 .fw-semibold         - Changes the type to be 500 weight
-.fw-bold		         - Changes the type to be 700 weight
+.fw-bold		         - Changes the type to be 600 weight
 
 Styleguide 1.1
 

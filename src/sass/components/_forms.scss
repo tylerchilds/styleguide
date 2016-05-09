@@ -4,7 +4,7 @@ Forms
 
 Markup:
 <form>
-  <label class="textfield {{modifier_class}}">
+  <label class="textfield">
     <input type="text" />
     <span class="textfield__label">Name</span>
   </label>
@@ -16,18 +16,18 @@ Markup:
     <input type="radio" name="example" />
     <span class="radio__label">Mobile</span>
   </label>
-  <label class="select {{modifier_class}}">
-    <select>
+  <label class="select">
+    <select name="select">
       <option disabled="disabled" selected="selected">Flavors</option>
       <option>Chocolate</option>
     </select>
-    <span class="select-label">Favorite Ice Cream</span>
+    <span class="select__label" for="select">Favorite Ice Cream</span>
   </label>
   <label class="textfield">
     <textarea></textarea>
-    <span class="textfield__label">Comments:</span>
+    <span class="textfield__label">Comments</span>
   </label>
-  <label class="checkbox {{modifier_class}}">
+  <label class="checkbox">
     <input type="checkbox" />
     <span class="checkbox__label">I Lied</span>
   </label>
@@ -47,24 +47,25 @@ label{
   cursor: pointer;
   display: inline-block;
   margin-bottom: .5rem;
-  padding: .5rem 1rem .5rem 30px;
+  padding: 0 1rem 0 30px;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
 .label--top{
+  background-color: $white;
   display: block;
   position: relative;
-  padding: 1rem 0 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .label__label--top{
-  @include fs-small()
-  background-color: $white;
+  @include fs-xsmall()
   position: absolute;
-  left: .5rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  top: 0;
+  left: 1px;
+  line-height: 1;
+  padding: .5rem;
+  top: 1px;
 }
 
 /*
@@ -105,6 +106,7 @@ Styleguide 3.1
 }
 
 .radio__label{
+  @include fs-xsmall()
   color: $gray3;
 
   &:before{
@@ -164,34 +166,35 @@ Styleguide 3.2
 }
 
 .checkbox .checkbox__label {
+  @include fs-xsmall()
   color: $gray3;
+
+  &:before,
+  &:after{
+    border-radius: 2px;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 50%;
+  }
 
   &:before{
     background-color: $white;
     border: 2px solid $gray3;
-    border-radius: 2px;
-    content: '';
     height: 16px;
-    left: 0;
     margin-top: -10px;
-    position: absolute;
-    top: 50%;
     width: 16px;
   }
 
   &:after{
-    @include icon();
     border: 1px solid transparent;
-    border-radius: 2px;
     color: $primary-dark;
-    content: '';
     font-size: 14px;
     height: 14px;
-    left: 0;
+    line-height: 1;
     margin-top: -10px;
     padding: 2px;
-    position: absolute;
-    top: 50%;
+    text-align: center;
     width: 14px;
   }
 }
@@ -202,7 +205,7 @@ Styleguide 3.2
   }
 
   &:after{
-    content: '\f00c';
+    content: '\2714';
   }
 }
 
@@ -242,7 +245,7 @@ Styleguide 3.3
   border: 1px solid $gray3;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 1.5rem .5rem .5rem;
   width: 100%;
 }
 
@@ -250,14 +253,12 @@ Styleguide 3.3
   margin-bottom: -5px;
 }
 
-.textfield input:focus,
-.textfield textarea:focus {
+.textfield *:focus{
   border-color: $primary;
   outline: none;
 }
 
-.textfield input[disabled],
-.textfield textarea[disabled] {
+.textfield *[disabled]{
   background-color: $gray6;
   color: $gray2;
 }
@@ -287,20 +288,39 @@ Styleguide 3.4
 
 .select{
   @extend .label--top;
+
+  &:after{
+  	content: '';
+  	border-left: 6px solid transparent;
+  	border-right: 6px solid transparent;
+  	border-top: 6px solid $gray3;
+    height: 0;
+    margin-top: -5px;
+    position: absolute;
+    right: 1rem;
+    bottom: 1.3rem;
+    width: 0;
+  }
 }
 
 .select select {
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid $gray3;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 1.5rem .5rem .5rem;
+  position: relative;
   width: 100%;
+  z-index: $z-index-1;
 }
 
 .select select:focus{
   border-color: $primary;
   outline: none;
+}
+
+.select select:focus + .select__label{
+  border-color: $primary;
 }
 
 .select__label{

@@ -7,7 +7,8 @@ header h2 {
   padding: 0; }
 
 header a:link, header a:visited, header a:hover, header a:focus, header a:active {
-  color: #ffffff; }
+  color: #ffffff;
+  text-decoration: none; }
 
 nav {
   border-bottom: 1px solid #dededf;
@@ -64,54 +65,6 @@ nav li {
 .example-demo hr {
   border-bottom: 1px solid #7d7d7e;
   margin: 30px 0; }
-
-.example-code {
-  display: none;
-  padding: 0 20px;
-  border-top: 1px solid #5a5a5b;
-  background-color: #272822;
-  overflow: auto;
-  display: none; }
-  .example-code xmp,
-  .example-code pre {
-    margin: 0;
-    border: none !important;
-    background-color: transparent !important; }
-  .example-code pre {
-    padding: 10px 0 !important;
-    font-size: 1.5rem; }
-  .example-code .pln {
-    color: #fff; }
-  .example-code .lit {
-    color: #fff; }
-  .example-code .tag {
-    color: #f12749; }
-  .example-code .atv,
-  .example-code .str {
-    color: #e6db6b; }
-  .example-code .atn {
-    color: #a6da2a; }
-  .example-code .com {
-    color: #5a5a5b; }
-  .example-code .pun {
-    color: #fff; }
-  .example-code .kwd {
-    color: #79cdcd; }
-  .example-code .typ {
-    color: #fff; }
-
-.example-toggle {
-  text-align: center;
-  background-color: #dededf;
-  padding: 10px;
-  cursor: pointer; }
-  .example-toggle:before {
-    content: "Show Code"; }
-  .example-toggle:hover {
-    background-color: #cdcdce; }
-
-.example-toggle.is-active:before {
-  content: "Hide Code"; }
 
 .color-cube {
   display: inline-block;

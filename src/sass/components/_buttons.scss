@@ -26,14 +26,15 @@ Styleguide 2.0
   color: $white;
   cursor: pointer;
   display: inline-block;
-  height: 4rem;
-  line-height: 3.6rem;
+  height: 4.3rem;
+  line-height: 3.9rem;
   max-width: 100%;
   transition-property: background-color, border-color;
   transition-duration: 200ms;
   margin: 0 auto;
   padding: 0 3rem;
   text-align: center;
+  text-decoration: none;
   width: auto;
 
   &:link,
@@ -56,15 +57,15 @@ Styleguide 2.0
 
 .btn--small{
   @include fs-small();
-  height: 3rem;
-  line-height: 2.6rem;
+  height: 2.9rem;
+  line-height: 2.5rem;
   padding: 0 1rem;
 }
 
 .btn--large{
   @include fs-large();
-  height: 5rem;
-  line-height: 4.6rem;
+  height: 5.3rem;
+  line-height: 4.9rem;
   padding: 0 5rem;
 }
 

@@ -30,6 +30,7 @@
         {{#if markup}}
           <section class="example">
             <div class="example-demo">
+<pre class="">{{markup}}</pre>
               <div class="kss-example">{{{markup}}}</div>
               {{#eachModifier}}
                 <hr />
@@ -37,10 +38,6 @@
                 <div class="kss-example">{{{markup}}}</div>
               {{/eachModifier}}
             </div>
-            <div class="example-code">
-<pre class="prettyprint no-copy">{{markup}}</pre>
-            </div>
-            <div class="example-toggle"></div>
           </section>
         {{/if}}
       </article>

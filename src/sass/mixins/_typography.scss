@@ -4,15 +4,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin icon($font-family: "FontAwesome") {
-  @include font-smoothing();
-  display: inline-block;
-  font-family: #{$font-family};
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-}
-
 /*
 
 Typesetting sizes
@@ -37,12 +28,11 @@ Typesetting sizes
 
 /*
 
-Typ
+Type headings
 
 */
 
 @mixin heading(){
-  letter-spacing: 1px;
   line-height: 1.2;
   padding: 1rem 0 1.5rem;
 }
@@ -88,7 +78,7 @@ Typesetting weights
 */
 
 @mixin fw-bold(){
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin fw-semibold(){
@@ -100,5 +90,5 @@ Typesetting weights
 }
 
 @mixin fw-light(){
-  font-weight: 100;
+  font-weight: 300;
 }

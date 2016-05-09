@@ -59,21 +59,20 @@ pre{
 }
 
 a:link{
-  color: $primary;
-  text-decoration: none;
+  color: $link;
 }
 
 a:visited{
-  color: $primary;
+  color: $link--visited;
 }
 
 a:hover,
 a:focus{
-  color: $primary-dark;
+  color: $link--hover;
 }
 
 a:active{
-  color: $primary-dark;
+  color: $link--active;
 }
 
 img,
