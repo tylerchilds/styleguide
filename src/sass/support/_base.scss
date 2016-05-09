@@ -195,6 +195,7 @@ table{
   border: 1px solid $gray3;
   border-radius: 2px;
   border-collapse: separate;
+  border-spacing: 0;
   margin-bottom: 1.75rem;
   width: 100%;
 
@@ -222,7 +223,7 @@ select,
 button,
 textarea
 {
-  @extend .body;
+  font: inherit;
   resize: none;
   -webkit-appearance: none;
   -moz-appearance: none;
