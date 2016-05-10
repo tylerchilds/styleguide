@@ -24,12 +24,11 @@ Styleguide 1.0
 html{
 	font-size: 62.5%;
 	line-height: 62.5%;
-	background: url(http://basehold.it/i/12) repeat left 16px;
+	//background: url(http://basehold.it/i/12) repeat left top;
 
 	@media screen and (min-width: 768px){
 		font-size: 75%;
 		line-height: 7.5%;
-		background: url(http://basehold.it/i/14) repeat left 16px;
 	}
 }
 

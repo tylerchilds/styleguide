@@ -3,10 +3,10 @@
 header{
   background-color: $primary;
   color: $white;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem;
 }
 
-header h2{
+header h3{
   padding: 0;
 }
 
@@ -22,32 +22,29 @@ header a{
 }
 
 nav{
-  border-bottom: 1px solid $gray5;
-  padding: .75rem 1.5rem;
+  border-bottom: .1rem solid $gray5;
+  padding: .6rem 1.5rem .5rem;
   text-align: center;
 }
 
 nav li{
-  padding: .2rem 1.5rem;
+  padding: 0 1.5rem;
   display: inline-block;
 }
 
 .pattern{
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .pattern-description{
-  margin-bottom: 20px;
+  margin-bottom: 2.4rem;
 }
 
 .example{
-  margin-bottom: 20px;
-  border: 1px solid $gray2;
+  margin-bottom: 2.3rem;
+  border: .1rem solid $gray2;
   border-radius: 5px;
-}
-
-.example-demo{
-  padding: 40px 20px 20px;
+  padding: 3.5rem 2rem;
   position: relative;
 
   &:before{
@@ -61,45 +58,14 @@ nav li{
   }
 }
 
-.example-demo > button{
-  vertical-align: bottom;
-  margin-bottom: 10px;
-}
-
-.example-demo hr{
-  margin-bottom: 10px;
-  border: none;
-}
-
-.example-demo .notification{
-  margin-bottom: 20px;
-}
-
-.example-demo .icon{
-  margin-bottom: 4px;
-}
-
-.example-demo .icon_button{
-  margin-bottom: 4px;
-}
-
-
-.example-alignment > .grid:first-child{
-  height: 75px;
-}
-
-.example-demo hr{
-  border-bottom: 1px solid $gray3;
-  margin: 30px 0;
-}
-
 .color-cube{
-  display: inline-block;
+  display: block;
+  float: left;
   margin-right: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 8.6rem;
+  height: 8.6rem;
 }
 
 .color-cube.gray1{
@@ -143,14 +109,6 @@ nav li{
   font-size: 12px;
   font-weight: bold;
 }
-
-.menu-toggle{
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: $z_index-5;
-}
-
 .kss-modifier-title{
   color: $gray3;
 }
