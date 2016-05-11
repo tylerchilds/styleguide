@@ -1,5 +1,7 @@
 *{
-  @include font-smoothing();
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html{
@@ -17,7 +19,8 @@ pre,
 code,
 samp,
 kbd{
-  @include fs-xsmall();
+  background-color: $gray6;
+  font-size: $font-size--small;
   color: $primary-dark;
   font-family: $monospace;
   line-height: 1;
@@ -29,15 +32,16 @@ kbd{
   border-radius: 2px;
   overflow-y: hidden;
   overflow-x: auto;
+  padding: .4rem .4rem .2rem;
 }
 
 pre{
-  border: .1rem solid $gray5;
   border-radius: 2px;
+  line-height: $line-height;
   overflow-y: hidden;
   overflow-x: auto;
-  padding: .7rem;
-  margin: 1rem 0;
+  padding: 1.2rem 1rem;
+  margin: 0 0 2.4rem;
 
   code,
   samp,
@@ -73,13 +77,23 @@ video{
 }
 
 hr{
-  margin-top: 1rem;
-  margin-bottom: 2.4rem;
+  height: 4.8rem;
+  position: relative;
+
+  &:before{
+    background-color: $gray4;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
 }
 
 ol,
 ul{
-	margin: 0 0 1.2rem 2rem;
+	margin-left: 2rem;
+  padding: 0 0 2.4rem;
 }
 
 ol{
@@ -87,7 +101,7 @@ ol{
 }
 
 ol ol{
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 ul{
@@ -95,7 +109,7 @@ ul{
 }
 
 ul ul{
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 dt{
@@ -105,15 +119,8 @@ dd{
 	text-indent: 2rem;
 }
 
-hr{
-  border-top: .1rem solid $gray5;
-  border-bottom: .1rem solid $gray6;
-  border-left: none;
-  border-right: none;
-}
-
 blockquote{
-	margin: 0 0 1.2rem 1.2rem;
+	margin: 0 0 2.4rem 1.2rem;
 	border-left: .3rem solid $gray4;
 	padding: 1.2rem;
 
@@ -125,7 +132,7 @@ blockquote{
 
 figure{
   margin: 0 auto;
-  padding-bottom: 1.2rem;
+  padding-bottom: 2.4rem;
 
   img{
     display: table;
@@ -138,7 +145,7 @@ figcaption,
 small,
 sub,
 sup{
-  @include fs-small();
+  font-size: $font-size--small;
   line-height: 1;
 }
 
@@ -146,7 +153,7 @@ caption,
 figcaption{
   text-align: center;
   font-style: italic;
-  padding: .5rem 0;
+  padding: .6rem 0;
 }
 
 em,
@@ -189,15 +196,16 @@ sup{
 }
 
 table{
-  border: .1rem solid $gray3;
   border-radius: 2px;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.4rem;
   width: 100%;
 
   th{
-    @include fw-bold();
+    background-color: $gray3;
+    color: $white;
+    font-weight: 500;
     text-align: left;
   }
 
@@ -206,7 +214,11 @@ table{
   }
 
   td{
-    @include fs-small();
+    font-size: $font-size--small;
+  }
+
+  tr:nth-child(even) td{
+    background-color: $gray5;
   }
 
   tr:nth-child(odd) td{

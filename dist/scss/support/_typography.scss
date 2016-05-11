@@ -23,12 +23,9 @@ Styleguide 1.0
 
 html{
 	font-size: 62.5%;
-	line-height: 62.5%;
-	//background: url(http://basehold.it/i/12) repeat left top;
 
 	@media screen and (min-width: 768px){
-		font-size: 75%;
-		line-height: 7.5%;
+		font-size: 78.125%;
 	}
 }
 
@@ -39,40 +36,52 @@ body{
 	line-height: $line-height;
 }
 
+.h{
+  font-weight: 500;
+  line-height: 4.8rem;
+  padding: .8rem 0 1.6rem;
+}
+
 h1,
 .h1{
-  @include h1();
+	@extend .h;
+	font-size: 3.6rem;
 }
 
 h2,
 .h2{
-  @include h2();
+	@extend .h;
+	font-size: 3.2rem;
 }
 
 
 h3,
 .h3{
-  @include h3();
+	@extend .h;
+	font-size: 3rem;
 }
 
 h4,
 .h4{
-  @include h4();
+	@extend .h;
+	font-size: 2.8rem;
 }
 
 
 h5,
 .h5{
-  @include h5();
+	@extend .h;
+	font-size: 2.6rem;
 }
 
 h6,
 .h6{
-  @include h6();
+	@extend .h;
+	font-size: 2.4rem;
 }
 
 p{
-	@include p();
+	padding-bottom: 2.4rem;
 }
 
 /*
@@ -86,7 +95,6 @@ Markup:
   The quick brown fox jumps over the lazy dog.
 </div>
 
-.fs-xsmall           - Smaller than the small font size
 .fs-small            - Smaller than the default font size
 .fs-base           	 - Exactly the default font size
 .fs-large            - Larger than the default font size
@@ -99,34 +107,31 @@ Styleguide 1.1
 
 */
 
-.fs-xsmall{
-  @include fs-xsmall();
-}
 
 .fs-small{
-  @include fs-small();
+  font-size: $font-size--small;
 }
 
 .fs-base{
-  @include fs-base();
+  font-size: $font-size;
 }
 
 .fs-large{
-  @include fs-large();
+  font-size: $font-size--large;
 }
 
 .fw-light{
-  @include fw-light();
+  font-weight: 300;
 }
 
 .fw-normal{
-  @include fw-normal();
+  font-weight: 400;
 }
 
 .fw-semibold{
-  @include fw-semibold();
+  font-weight: 500;
 }
 
 .fw-bold{
-  @include fw-bold();
+  font-weight: 600;
 }

@@ -1,9 +1,15 @@
+html.grid--is_active {
+  background: url(http://basehold.it/i/24) repeat left top; }
+  @media (min-width: 768px) {
+    html.grid--is_active {
+      background: url(http://basehold.it/i/30) repeat left top; } }
+
 header {
   background-color: #D15017;
   color: #ffffff;
-  padding: 1.2rem 1.5rem; }
+  padding: 1.2rem 1rem; }
 
-header h3 {
+header h4 {
   padding: 0; }
 
 header a:link, header a:visited, header a:hover, header a:focus, header a:active {
@@ -12,42 +18,42 @@ header a:link, header a:visited, header a:hover, header a:focus, header a:active
 
 nav {
   border-bottom: 0.1rem solid #dededf;
-  padding: .6rem 1.5rem .5rem;
+  padding: 1.2rem 1.5rem 1.1rem;
   text-align: center; }
+
+nav ul {
+  padding: 0; }
 
 nav li {
   padding: 0 1.5rem;
   display: inline-block; }
 
 .pattern {
-  margin-bottom: 6rem; }
+  margin-bottom: 4.8rem; }
 
 .pattern-description {
   margin-bottom: 2.4rem; }
 
 .example {
-  margin-bottom: 2.3rem;
-  border: 0.1rem solid #5a5a5b;
-  border-radius: 5px;
-  padding: 3.5rem 2rem;
+  margin-bottom: 2.4rem;
+  padding: 4.8rem 2rem 2.4rem;
   position: relative; }
   .example:before {
     color: #5a5a5b;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 1rem;
     font-weight: bold;
-    font-size: 12px;
     content: "EXAMPLE"; }
 
 .color-cube {
   display: block;
   float: left;
   margin-right: 6px;
-  margin-bottom: 1rem;
+  margin-bottom: 2.4rem;
   position: relative;
-  width: 8.6rem;
-  height: 8.6rem; }
+  width: 9.6rem;
+  height: 9.6rem; }
 
 .color-cube.gray1 {
   background-color: #3c3c3d; }

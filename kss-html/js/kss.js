@@ -11,6 +11,15 @@ $(function(){
       e.preventDefault();
     });
   });
+  
+  if(localStorage.getItem('grid') === "true"){
+    $('html').addClass('grid--is_active');
+  }
+});
+
+$(document).on('click', '.js-grid-toggle', function(){
+  $('html').toggleClass('grid--is_active');
+  localStorage.setItem('grid', $('html').is('.grid--is_active'));
 });
 
 var hexDigits = new Array
