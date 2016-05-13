@@ -148,8 +148,6 @@ figure {
     display: table;
     margin: 0 auto; }
 
-caption,
-figcaption,
 small,
 sub,
 sup {
@@ -158,9 +156,9 @@ sup {
 
 caption,
 figcaption {
-  text-align: center;
+  font-size: 1.2rem;
   font-style: italic;
-  padding: .6rem 0; }
+  text-align: center; }
 
 em,
 cite,

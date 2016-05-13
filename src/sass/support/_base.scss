@@ -140,8 +140,6 @@ figure{
   }
 }
 
-caption,
-figcaption,
 small,
 sub,
 sup{
@@ -151,9 +149,9 @@ sup{
 
 caption,
 figcaption{
-  text-align: center;
+  font-size: $font-size--small;
   font-style: italic;
-  padding: .6rem 0;
+  text-align: center;
 }
 
 em,
