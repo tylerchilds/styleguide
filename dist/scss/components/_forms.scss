@@ -54,19 +54,20 @@ label{
 .label--top{
   background-color: $white;
   display: block;
-  position: relative;
+  margin-top: -2px;
   margin-bottom: 2.4rem;
+  position: relative;
 }
 
 .label__label--top{
   background-color: $white;
   font-size: $font-size--small;
   position: absolute;
-  left: .1rem;
+  left: 1px;
   line-height: 1;
   padding: .5rem;
-  right: .1rem;
-  top: .1rem;
+  right: 1px;
+  top: 1px;
 }
 
 /*
@@ -245,10 +246,10 @@ Styleguide 3.3
 
 .textfield input,
 .textfield textarea {
-  border: .1rem solid $gray3;
+  border: 1px solid $gray3;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.7rem .5rem .5rem;
+  padding: 1.8rem .5rem .6rem;
   width: 100%;
 }
 
@@ -304,10 +305,10 @@ Styleguide 3.4
 
 .select select {
   background-color: transparent;
-  border: .1rem solid $gray3;
+  border: 1px solid $gray3;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.7rem .5rem .5rem;
+  padding: 1.8rem .5rem .6rem;
   position: relative;
   width: 100%;
   z-index: $z-index-1;

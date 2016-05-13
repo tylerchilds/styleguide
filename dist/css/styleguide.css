@@ -255,7 +255,7 @@ Styleguide 1.0
 */
 html {
   font-size: 62.5%; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     html {
       font-size: 78.125%; } }
 
@@ -407,7 +407,7 @@ Markup:
 .wrapper--small      - Small Wrapper
 .wrapper--large      - Large Wrapper
 
-Styleguide 5.1
+Styleguide 5.0
 
 */
 .wrapper {
@@ -432,9 +432,6 @@ Buttons and their variations
 Markup:
 <a href="#" class="btn {{modifier_class}}">Button</a>
 
-.btn--small           - Small Button
-.btn--large           - Large Button
-.btn--outline         - Outlined button
 .btn--invisible       - Hardly even a button, but great for alignment
 .btn--block           - 100% width with minimal side padding
 
@@ -445,16 +442,16 @@ Styleguide 2.0
 [type=submit],
 button {
   background-color: #D15017;
-  border: 0.2rem solid #D15017;
+  border: none;
   border-radius: .2rem;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
   height: 4.8rem;
-  line-height: 4.4rem;
+  line-height: 4.8rem;
   max-width: 100%;
-  transition-property: background-color, border-color;
+  transition-property: background-color;
   transition-duration: 200ms;
   margin: 0 auto;
   padding: 0 3rem;
@@ -473,39 +470,13 @@ button {
   [type=submit]:hover,
   button:hover {
     background-color: #ba4714;
-    border-color: #ba4714;
     color: #ffffff; }
   .btn:focus, [type=button]:focus,
   [type=submit]:focus,
   button:focus {
     outline: 0.1rem dotted #7d7d7e; }
 
-.btn--small {
-  font-size: 1.2rem;
-  height: 2.4rem;
-  line-height: 2rem;
-  padding: 0 1rem; }
-
-.btn--large {
-  font-size: 2rem;
-  height: 7.2rem;
-  line-height: 6.8rem;
-  padding: 0 5rem; }
-
-.btn--outline {
-  background-color: rgba(255, 255, 255, 0);
-  border-color: #D15017;
-  color: #D15017;
-  transition-property: background-color; }
-  .btn--outline:link, .btn--outline:focus, .btn--outline:visited {
-    color: #D15017; }
-  .btn--outline:hover {
-    background-color: #D15017;
-    border-color: #D15017;
-    color: #ffffff; }
-
 .btn--invisible {
-  border-color: transparent;
   background-color: transparent;
   color: #D15017;
   text-decoration: underline; }
@@ -513,7 +484,6 @@ button {
     color: #D15017; }
   .btn--invisible:hover {
     color: #ba4714;
-    border-color: transparent;
     background-color: transparent; }
 
 .btn--block {
@@ -574,18 +544,19 @@ label {
 .label--top, .textfield, .select {
   background-color: #ffffff;
   display: block;
-  position: relative;
-  margin-bottom: 2.4rem; }
+  margin-top: -2px;
+  margin-bottom: 2.4rem;
+  position: relative; }
 
 .label__label--top, .textfield__label, .select__label {
   background-color: #ffffff;
   font-size: 1.2rem;
   position: absolute;
-  left: .1rem;
+  left: 1px;
   line-height: 1;
   padding: .5rem;
-  right: .1rem;
-  top: .1rem; }
+  right: 1px;
+  top: 1px; }
 
 /*
 
@@ -724,10 +695,10 @@ Styleguide 3.3
 
 .textfield input,
 .textfield textarea {
-  border: 0.1rem solid #7d7d7e;
+  border: 1px solid #7d7d7e;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.7rem .5rem .5rem;
+  padding: 1.8rem .5rem .6rem;
   width: 100%; }
 
 .textfield *:focus {
@@ -770,10 +741,10 @@ Styleguide 3.4
 
 .select select {
   background-color: transparent;
-  border: 0.1rem solid #7d7d7e;
+  border: 1px solid #7d7d7e;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.7rem .5rem .5rem;
+  padding: 1.8rem .5rem .6rem;
   position: relative;
   width: 100%;
   z-index: 100; }
@@ -784,5 +755,36 @@ Styleguide 3.4
 
 .select select:focus + .select__label {
   border-color: #D15017; }
+
+/*
+
+Grid
+
+Basic grid made using flexbox. Direct children of `.grid` are rows and direct children of rows are columns.
+
+Markup:
+<div class="grid">
+  <div>
+    <p>
+      Cell 1
+    </p>
+    <p>
+      Cell 2
+    </p>
+  </div>
+</div>
+
+Styleguide 4.0
+
+*/
+.grid > *:not(.grid) {
+  display: -webkit-flex;
+  display: flex; }
+
+.grid > *:not(.grid) > * {
+  -webkit-flex-grow: 4;
+  -moz-flex-grow: 4;
+  -ms-flex-grow: 4;
+  flex-grow: 4; }
 
 /*# sourceMappingURL=styleguide.css.map */

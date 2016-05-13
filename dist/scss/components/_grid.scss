@@ -1,0 +1,35 @@
+/*
+
+Grid
+
+Basic grid made using flexbox. Direct children of `.grid` are rows and direct children of rows are columns.
+
+Markup:
+<div class="grid">
+  <div>
+    <p>
+      Cell 1
+    </p>
+    <p>
+      Cell 2
+    </p>
+  </div>
+</div>
+
+Styleguide 4.0
+
+*/
+
+// rows
+.grid > *:not(.grid){
+  display: -webkit-flex;
+  display: flex;
+}
+
+// columns
+.grid > *:not(.grid) > *{
+  -webkit-flex-grow: 4;
+  -moz-flex-grow: 4;
+  -ms-flex-grow: 4;
+  flex-grow: 4;
+}

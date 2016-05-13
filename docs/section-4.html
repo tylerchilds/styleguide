@@ -60,18 +60,30 @@
 <div class="wrapper">
 
       <article class="pattern">
-          <h2 id="2">Buttons</h2>
-          <div class="subtitle pattern-description"><p>Buttons and their variations</p>
+          <h2 id="4">Grid</h2>
+          <div class="subtitle pattern-description"><p>Basic grid made using flexbox. Direct children of <code>.grid</code> are rows and direct children of rows are columns.</p>
 </div>
           <section class="example">
-<pre class="">&lt;a href=&quot;#&quot; class=&quot;btn [modifier class]&quot;&gt;Button&lt;/a&gt;</pre>
-            <div class="kss-example"><a href="#" class="btn [modifier class]">Button</a></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.btn--invisible</code> <span class="f-right fs-small">Hardly even a button, but great for alignment</span></p>
-              <div class="kss-example"><a href="#" class="btn btn--invisible">Button</a></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.btn--block</code> <span class="f-right fs-small">100% width with minimal side padding</span></p>
-              <div class="kss-example"><a href="#" class="btn btn--block">Button</a></div>
+<pre class="">&lt;div class=&quot;grid&quot;&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      Cell 1
+    &lt;/p&gt;
+    &lt;p&gt;
+      Cell 2
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            <div class="kss-example"><div class="grid">
+  <div>
+    <p>
+      Cell 1
+    </p>
+    <p>
+      Cell 2
+    </p>
+  </div>
+</div></div>
           </section>
       </article>
 </div>
