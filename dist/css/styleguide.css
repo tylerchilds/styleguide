@@ -243,7 +243,7 @@ Markup:
 .ta-center           		 - text-align: center;
 .ta-right           		 - text-align: right;
 
-Styleguide 6.0
+Styleguide 4.0
 
 */
 .disabled {
@@ -291,7 +291,7 @@ Markup:
 .fw-semibold         - Changes the type to be 500 weight
 .fw-bold		         - Changes the type to be 600 weight
 
-Styleguide 6.1
+Styleguide 4.1
 
 */
 .fs-small {
@@ -654,21 +654,28 @@ Grid
 Basic grid made using flexbox. Direct children of `.grid` are rows and direct children of rows are columns.
 
 Markup:
-<div class="grid">
-  <div>
-    <div class="{{modifier_class}}">
+<main class="grid">
+  <article>
+    <section class="{{modifier_class}}">
       Cell 1
+    </section>
+    <div class="grid">
+      <aside>
+        <p class="grid {{modifier_class}}">
+          Cell 2.1
+        </p>
+        <ul>
+          <li>Cell 2.2</li>
+        </ul>
+      </aside>
     </div>
-    <div>
-      Cell 2
-    </div>
-  </div>
-</div>
+  </article>
+</main>
 
 .column--light           - Less important column
 .column--heavy           - More important column
 
-Styleguide 4.0
+Styleguide 1.0
 
 */
 .grid > *:not(.grid) {
@@ -682,7 +689,7 @@ Styleguide 4.0
   -moz-flex-grow: 4;
   -ms-flex-grow: 4;
   flex-grow: 4;
-  padding: 1rem; }
+  padding: 0 1rem; }
   .grid > *:not(.grid) > *.column--light {
     -webkit-flex-grow: 2;
     -moz-flex-grow: 2;
@@ -706,7 +713,7 @@ Markup:
 .wrapper--small      - Small Wrapper
 .wrapper--large      - Large Wrapper
 
-Styleguide 4.1
+Styleguide 1.1
 
 */
 .wrapper {
