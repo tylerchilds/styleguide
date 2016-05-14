@@ -1,4 +1,8 @@
 *{
+  border: 0;
+  font: inherit;
+	margin: 0;
+	padding: 0;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6,13 +10,56 @@
 
 html{
   box-sizing: border-box;
+  font-size: 62.5%;
   height: 100%;
+
+	@media screen and (min-width: 960px){
+		font-size: 78.125%;
+	}
 }
 
 body{
   box-sizing: border-box;
+  color: $gray1;
+  font-family: $base-font;
+  font-size: $font-size;
+  line-height: $line-height;
   min-height: 100%;
   position: relative;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 500;
+  line-height: 4.8rem;
+  padding: .8rem 0 1.6rem;
+}
+
+h1{
+	font-size: 3.6rem;
+}
+
+h2{
+	font-size: 3.2rem;
+}
+
+h3{
+	font-size: 3rem;
+}
+
+h4{
+	font-size: 2.8rem;
+}
+
+h5{
+	font-size: 2.6rem;
+}
+
+h6{
+	font-size: 2.4rem;
+}
+
+p{
+	padding-bottom: 2.4rem;
 }
 
 pre,
@@ -186,13 +233,6 @@ abbr{
   cursor: default;
 }
 
-sub{
-  vertical-align: sub;
-}
-sup{
-  vertical-align: super;
-}
-
 table{
   border-radius: 2px;
   border-collapse: separate;
@@ -208,7 +248,7 @@ table{
   }
 
   th, td{
-    padding: .6rem 1rem;
+    padding: 1.2rem;
   }
 
   td{
@@ -231,7 +271,6 @@ button,
 textarea
 {
   display: block;
-  font: inherit;
   resize: none;
   -webkit-appearance: none;
   -moz-appearance: none;

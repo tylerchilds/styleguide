@@ -7,14 +7,17 @@ Basic grid made using flexbox. Direct children of `.grid` are rows and direct ch
 Markup:
 <div class="grid">
   <div>
-    <p>
+    <div class="{{modifier_class}}">
       Cell 1
-    </p>
-    <p>
+    </div>
+    <div>
       Cell 2
-    </p>
+    </div>
   </div>
 </div>
+
+.column--light           - Less important column
+.column--heavy           - More important column
 
 Styleguide 4.0
 
@@ -22,8 +25,10 @@ Styleguide 4.0
 
 // rows
 .grid > *:not(.grid){
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  margin: 0 -1rem;
 }
 
 // columns
@@ -32,4 +37,51 @@ Styleguide 4.0
   -moz-flex-grow: 4;
   -ms-flex-grow: 4;
   flex-grow: 4;
+  padding: 1rem;
+
+  &.column--light{
+    -webkit-flex-grow: 2;
+    -moz-flex-grow: 2;
+    -ms-flex-grow: 2;
+    flex-grow: 2;
+  }
+
+  &.column--heavy{
+    -webkit-flex-grow: 8;
+    -moz-flex-grow: 8;
+    -ms-flex-grow: 8;
+    flex-grow: 8;
+  }
+}
+
+/*
+
+Wrappers
+
+Use wrappers when you need a content area that is a standardized width and centered on the page.
+
+Markup:
+<div class="wrapper {{modifier_class}}">Wrapper</div>
+
+.wrapper--small      - Small Wrapper
+.wrapper--large      - Large Wrapper
+
+Styleguide 4.1
+
+*/
+
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4.8rem 2rem;
+}
+
+.wrapper--large{
+  max-width: 1200px;
+  padding: 7.2rem 3rem;
+}
+
+.wrapper--small{
+  max-width: 640px;
+  padding: 2.4rem 1rem;
 }

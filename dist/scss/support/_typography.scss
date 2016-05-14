@@ -36,7 +36,7 @@ body{
 	line-height: $line-height;
 }
 
-.h{
+@mixin h{
   font-weight: 500;
   line-height: 4.8rem;
   padding: .8rem 0 1.6rem;
@@ -44,39 +44,39 @@ body{
 
 h1,
 .h1{
-	@extend .h;
+	@include h();
 	font-size: 3.6rem;
 }
 
 h2,
 .h2{
-	@extend .h;
+	@include h();
 	font-size: 3.2rem;
 }
 
 
 h3,
 .h3{
-	@extend .h;
+	@include h();
 	font-size: 3rem;
 }
 
 h4,
 .h4{
-	@extend .h;
+	@include h();
 	font-size: 2.8rem;
 }
 
 
 h5,
 .h5{
-	@extend .h;
+	@include h();
 	font-size: 2.6rem;
 }
 
 h6,
 .h6{
-	@extend .h;
+	@include h();
 	font-size: 2.4rem;
 }
 

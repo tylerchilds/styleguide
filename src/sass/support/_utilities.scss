@@ -55,3 +55,55 @@ Styleguide 6.0
 .ta-right{
   text-align: right;
 }
+
+/*
+
+Type Utilities
+
+These are specific typography related utilities
+
+Markup:
+<div class="type {{modifier_class}}">
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+.fs-small            - Smaller than the default font size
+.fs-base           	 - Exactly the default font size
+.fs-large            - Larger than the default font size
+.fw-light            - Changes the type to be 300 weight
+.fw-normal           - Changes the type to be 400 weight
+.fw-semibold         - Changes the type to be 500 weight
+.fw-bold		         - Changes the type to be 600 weight
+
+Styleguide 6.1
+
+*/
+
+
+.fs-small{
+  font-size: $font-size--small;
+}
+
+.fs-base{
+  font-size: $font-size;
+}
+
+.fs-large{
+  font-size: $font-size--large;
+}
+
+.fw-light{
+  font-weight: 300;
+}
+
+.fw-normal{
+  font-weight: 400;
+}
+
+.fw-semibold{
+  font-weight: 500;
+}
+
+.fw-bold{
+  font-weight: 600;
+}
