@@ -6,16 +6,9 @@ Light-weight CSS framework that makes a few assumptions, mostly regarding forms.
 
 ### Features
 
-* Vertical Rhythm
-* Consistent pattern for form fields
-* 8kb minified
-* Smart defaults for all default elements (Conventional)
-* CSS specificity is very low in the class hierarchy (Configurable)
-* Solid foundation for a living styleguide using KSS
-
 ## Installation
 
-To use the CSS as is, you can install using bower:
+To use the CSS as is (a basic base stylesheet), you can install using bower:
 
 ```
 bower install styleguide
