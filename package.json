@@ -6,7 +6,7 @@
   ],
   "description": "A simple styleguide framework powered by gulp and kss-node.",
   "homepage": "http://www.tylerchilds.com/styleguide",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "repository": {
     "type": "git",
     "url": "git://github.com/tylerchilds/styleguide.git"

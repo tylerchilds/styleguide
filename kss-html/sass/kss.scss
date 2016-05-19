@@ -1,17 +1,9 @@
 @import "variables";
 
-html.grid--is_active{
-  background: url(http://basehold.it/i/24) repeat left top;
-
-  @media (min-width: 960px){
-    background: url(http://basehold.it/i/30) repeat left top;
-  }
-}
-
 header{
   background-color: $primary;
   color: $white;
-  padding: 0 1rem;
+  padding: 1.2rem;
 }
 
 header h4{
@@ -69,57 +61,18 @@ nav li{
   }
 }
 
-.color-cube{
-  display: block;
-  float: left;
-  margin-right: 6px;
-  margin-bottom: 2.4rem;
-  position: relative;
-  width: 9.6rem;
-  height: 9.6rem;
+.f-right{
+  float: right;
 }
 
-.color-cube.gray1{
-  background-color: $gray1;
+.clearfix{
+  overflow: hidden;
 }
 
-.color-cube.gray2{
-  background-color: $gray2;
+.wrapper{
+  padding: 2.4rem 1rem;
 }
 
-.color-cube.gray3{
-  background-color: $gray3;
-}
-
-.color-cube.gray4{
-  background-color: $gray4;
-}
-
-.color-cube.gray5{
-  background-color: $gray5;
-}
-
-.color-cube.gray6{
-  background-color: $gray6;
-}
-
-.color-cube.primary{
-  background-color: $primary;
-}
-
-.color-cube.primary-dark{
-  background-color: $primary-dark;
-}
-
-.color-cube span{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, .75);
-  padding: 3px 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
 .kss-modifier-title{
   color: $gray3;
 }

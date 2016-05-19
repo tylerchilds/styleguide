@@ -11,19 +11,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <meta name="apple-touch-fullscreen" content="yes">
 
-    {% block head %}
-    {% endblock %}
+    
+  <link href="../dist/css/styleguide.css" rel="stylesheet" />
+  <link href="./public/css/kss.css" rel="stylesheet" />
+
   </head>
   <body class="language-markup">
 
-      {% include "../includes/header.html" %}
+      <header>
+  <h4>
+    <a href="./index.html">Styleguide</a>
+  </h4>
+</header>
 
-      {% block content %}{% endblock %}
 
-      {% include "../includes/footer.html" %}
+      
 
-    {% block foot %}
-    {% endblock %}
+
+<nav>
+  <ul>
+      <li>
+        <a href="section-1.html">Your Component</a>
+      </li>
+  </ul>
+</nav>
+
+
+<div class="wrapper">
+
+     <h2 id="styleguide">Styleguide</h2>
+<p>To get started, you&#39;ll want to edit example.scss by adding some CSS and changing the <a href="http://warpspire.com/kss/">KSS syntax</a> to accurately reflect your component.</p>
+<p>Good luck.</p>
+
+</div>
+
+
+
+
+      
+
+    
+  <script src="./public/js/kss.js"></script>
+
 
   </body>
 </html>

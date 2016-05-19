@@ -65,7 +65,7 @@ samp,
 kbd {
   background-color: #efeff0;
   font-size: 1.2rem;
-  color: #e528b0;
+  color: #ba4714;
   font-family: "Consolas", "Monaco", "Courier New", monospace;
   line-height: 1; }
 
@@ -227,5 +227,20 @@ select:-webkit-autofill {
   color: #3c3c3d;
   -webkit-text-fill-color: #3c3c3d;
   -webkit-box-shadow: 0 0 0px 1000px white inset !important; }
+
+/*
+
+Your Component
+
+A useful description of the component, followed by some markup and then modifier classes for the component.
+
+Markup:
+<div class="component-name {{modifier_class}}"></div>
+
+.component-name--modifier           - Description of how the component is modified
+
+Styleguide 1.0.0
+
+*/
 
 /*# sourceMappingURL=styleguide.css.map */
