@@ -1,11 +1,11 @@
 {
-  "name": "identity-styleguide",
+  "name": "styleguide",
   "version": "0.0.12",
   "homepage": "http://www.tylerchilds.com/styleguide",
   "authors": [
     "Tyler Childs <tylerwchilds@gmail.com>"
   ],
-  "description": "Bower package containing front end components.",
+  "description": "A simple styleguide framework powered by gulp and kss-node.",
   "private": false,
   "ignore": [
     "**/.*",

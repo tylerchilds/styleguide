@@ -5,7 +5,7 @@ html.grid--is_active {
       background: url(http://basehold.it/i/30) repeat left top; } }
 
 header {
-  background-color: #D15017;
+  background-color: #E83FB8;
   color: #ffffff;
   padding: 0 1rem; }
 
@@ -76,10 +76,10 @@ nav li {
   background-color: #efeff0; }
 
 .color-cube.primary {
-  background-color: #D15017; }
+  background-color: #E83FB8; }
 
 .color-cube.primary-dark {
-  background-color: #ba4714; }
+  background-color: #e528b0; }
 
 .color-cube span {
   position: absolute;

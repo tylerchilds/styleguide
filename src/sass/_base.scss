@@ -29,9 +29,17 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{
+  font-family: $heading;
   font-weight: 500;
+}
+
+h1, h2, h3{
   line-height: 4.8rem;
   padding: .8rem 0 1.6rem;
+}
+
+h4, h5, h6{
+  padding: 2.4rem 0;
 }
 
 h1{
@@ -43,23 +51,27 @@ h2{
 }
 
 h3{
-	font-size: 3rem;
-}
-
-h4{
 	font-size: 2.8rem;
 }
 
+h4{
+	font-size: 2.0rem;
+}
+
 h5{
-	font-size: 2.6rem;
+	font-size: 1.8rem;
 }
 
 h6{
-	font-size: 2.4rem;
+	font-size: 1.6rem;
 }
 
 p{
 	padding-bottom: 2.4rem;
+}
+
+form{
+  padding: 2.4rem 0;
 }
 
 pre,
@@ -125,6 +137,7 @@ video{
 
 hr{
   height: 4.8rem;
+  margin-bottom: 2.4rem;
   position: relative;
 
   &:before{
@@ -169,7 +182,7 @@ dd{
 blockquote{
 	margin: 0 0 2.4rem 1.2rem;
 	border-left: .3rem solid $gray4;
-	padding: 1.2rem;
+	padding: 2.4rem 1.2rem;
 
 	p:last-child{
 		padding-bottom: 0;
@@ -241,27 +254,17 @@ table{
   width: 100%;
 
   th{
-    background-color: $gray3;
-    color: $white;
     font-weight: 500;
     text-align: left;
   }
 
   th, td{
-    padding: 1.2rem;
+    padding: 0 .6rem;
   }
+}
 
-  td{
-    font-size: $font-size--small;
-  }
-
-  tr:nth-child(even) td{
-    background-color: $gray5;
-  }
-
-  tr:nth-child(odd) td{
-    background-color: $gray6;
-  }
+label{
+  color: $gray3;
 }
 
 input,

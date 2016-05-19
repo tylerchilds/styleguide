@@ -15,7 +15,8 @@ var bump          = require('gulp-bump'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
     swig          = require('gulp-swig'),
-    tag_version   = require('gulp-tag-version');
+    tag_version   = require('gulp-tag-version'),
+    zip           = require('gulp-zip');;
 
 var config = {
    bowerDir: './bower_components' ,
@@ -40,7 +41,7 @@ gulp.task('bump', function() {
 });
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'minify', 'kss-html', 'kss');
+  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public');
 });
 
 // Clean build
@@ -49,7 +50,7 @@ gulp.task('clean', function() {
       './dist',
       './temp',
       './docs',
-      './kss-html/dist/',
+      './styleguide.zip'
     ])
     .pipe(clean({force: true}));
 });
@@ -94,26 +95,6 @@ gulp.task('kss', ['kss-html'], function(cb) {
 // Compile Templates
 gulp.task('kss-html', ['temp'], function(){
 
-  gulp.src('./kss-html/sass/kss.scss')
-    .pipe(sourcemaps.init())
-      .pipe(sass({
-          includePaths: ['./src/sass']
-        }).on('error', sass.logError))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./kss-html/dist/css'));
-
-  gulp.src([
-      config.bowerDir + '/jquery/jquery.js',
-      './kss-html/js/kss.js'
-    ])
-    .pipe(concat('kss.js'))
-    .pipe(gulp.dest('./kss-html/dist/js'));
-
-  gulp.src('./kss-html/fontcustom-preview.html')
-    .pipe(replace(/\.\.\/src/g, 'dist'))
-    .pipe(rename("fontcustom.htm"))
-    .pipe(gulp.dest('./docs'));
-
   return gulp.src('./kss-html/homepage.md')
     .pipe(swig({
       defaults: {
@@ -122,6 +103,24 @@ gulp.task('kss-html', ['temp'], function(){
     }))
     .pipe(rename("homepage.md"))
     .pipe(gulp.dest('./temp/kss'));
+});
+
+gulp.task('kss-public', ['kss'], function(){
+
+  gulp.src('./kss-html/sass/kss.scss')
+    .pipe(sourcemaps.init())
+      .pipe(sass({
+          includePaths: ['./src/sass']
+        }).on('error', sass.logError))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./docs/public/css'));
+
+  return gulp.src([
+      config.bowerDir + '/jquery/jquery.js',
+      './kss-html/js/kss.js'
+    ])
+    .pipe(concat('kss.js'))
+    .pipe(gulp.dest('./docs/public/js'));
 });
 
 gulp.task('sass', ['temp'], function() {
@@ -142,11 +141,6 @@ gulp.task('minify', ['sass'], function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('tag', function() {
-  gulp.src('./package.json')
-    .pipe(tag_version());
-});
-
 // Move source over for compiling
 gulp.task('temp', function(){
   // Sass
@@ -157,6 +151,28 @@ gulp.task('temp', function(){
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss']);
-  gulp.watch('./kss-html/**/*.*', ['kss']);
+  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-html', 'kss', 'kss-public']);
+  gulp.watch('./kss-html/**/*.*', ['kss-html', 'kss', 'kss-public']);
+});
+
+gulp.task('zip', ['zip-temp-dist', 'zip-temp-docs'], function(){
+
+  return gulp.src('temp/zip/**/*')
+    .pipe(zip('styleguide.zip'))
+    .pipe(gulp.dest('./'));
+
+});
+
+gulp.task('zip-temp-docs', function(){
+
+  return gulp.src('docs/**/*')
+    .pipe(gulp.dest('./temp/zip/docs'));
+
+});
+
+gulp.task('zip-temp-dist', function(){
+
+  return gulp.src('dist/**/*')
+    .pipe(gulp.dest('./temp/zip/dist'));
+
 });
